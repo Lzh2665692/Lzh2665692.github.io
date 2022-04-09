@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>完美解决国内访问github pages慢的方法 | 平顶山市一中附中</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://www.pdssyzfz.tk/favicon.ico?v=1649509731740">
+<link rel="stylesheet" href="https://www.pdssyzfz.tk/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="Github Pages为Github提供的一项静态站点托管服务，它直接从Github仓库获取静态文件进行发布，然后提供一个github.io的二级域名供用户访问，支持绑定自定义域名，支持开启HTTPS，开启HTTPS会自动申请证书同时在证..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://www.pdssyzfz.tk">
+        <img src="https://www.pdssyzfz.tk/images/avatar.png?v=1649509731740" class="site-logo">
+        <h1 class="site-title">平顶山市一中附中</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://www.pdssyzfz.tk/post/shi-yong-bang-zhu" class="site-nav">
+            帮助
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      平顶山一中附中论坛官方博客
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://www.pdssyzfz.tk/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">完美解决国内访问github pages慢的方法</h2>
+            <div class="post-date">2022-04-09</div>
+            
+            <div class="post-content" v-pre>
+              <p>Github Pages为Github提供的一项静态站点托管服务，它直接从Github仓库获取静态文件进行发布，然后提供一个github.io的二级域名供用户访问，支持绑定自定义域名，支持开启HTTPS，开启HTTPS会自动申请证书同时在证书过期前自动续签，这一切都是免费的，使用极其简单，只需要将你的静态文件提交到Github，然后开启Pages服务即可，我的博客就托管于Github Pages</p>
+<p>Github Pages免费且稳定的服务让我可以专注内容，而无需考虑成本及维护的问题，非常方便广受好评，但其最大的一个问题就是国内访问速度很慢，如何简单快速又低成本的解决这个问题呢？这里介绍一个服务：Netlify</p>
+<p>Netlify是一家提供静态网站托管的综合平台，支持自动从Github等仓库拉取代码并构建成静态网站进行发布，同时也支持自定义域名，自动申请SSL证书等功能，更为重要的是自动启用CDN加速，国内访问速度要快很多</p>
+<p>以下分别是Github Pages和Netlify两个平台同一项目请求速度的对比图<br>
+<img src="https://www.pdssyzfz.tk/post-images/1649477694280.png" alt="" loading="lazy"><br>
+从上图的测试结果可以看出国内各地的访问速度Netlify都能完胜，接下来详细介绍下如何通过Netlify给你的Github Pages加速</p>
+<p>Netlify<br>
+打开Netlify官网(https://www.netlify.com/)，点击右上角的Sign up注册账号，这里推荐关联Github账号<br>
+<img src="https://www.pdssyzfz.tk/post-images/1649477735113.png" alt="" loading="lazy"><br>
+关联认证后进入Netlify的后台页面，如下图，点击New site from Git</p>
+<p>选择网站源码托管的代码仓库类型，支持Github、Gitlab以及Bitbucket，选择GitHub</p>
+<p>然后会进入Github的认证授权页面，点击Authorize Netlify by Netlify</p>
+<p>点击Only select repositories选择要授权的Github仓库，当然也可以直接选择授权所有仓库，这个授权在设置中可以改</p>
+<p>授权完成回到Netlify后台页面，选择我们刚刚授权的Github仓库继续</p>
+<p>选择部署的用户以及分支，如果是一些需要编译的项目，还支持定义编译的命令以及最终发布的目录，纯静态网站的话都不需要填写，直接点击Deploy site即可完成部署</p>
+<p>部署完成后，Netlify会自动生成一个随机的二级域名xxx.netlify.com，我们可以修改为自定义的二级域名，点击Site Settings</p>
+<p>General -&gt; Site details下点击Change site name，可以为这个站点设置一个自定义的名字，二级域名也会相应改变</p>
+<p>如果你想绑定自己的域名，需要先在域名管理系统里新建解析，将域名CNAME指向到你的netlify二级域名，以阿里云为例如下</p>
+<p>然后进入Netlify管理后台，Domain management -&gt; Domains，点击Add domain alias，填入你的自定义域名</p>
+<p>待域名解析生效后就会看到新绑定的域名变为绿色，并且设置为了主域名</p>
+<p>最后为自定义域名开启HTTPS支持，Domain management -&gt; HTTPS，点击Verify DNS configuration，域名验证通过则会自动申请证书</p>
+<p>至此Netlify与Github绑定完成，可以通过自定义域名访问网站了，之后你每一次提交代码到Github，便会自动发布至Netlify，无需额外操作，非常方便</p>
+<p>其他说明<br>
+如果你是主域名要绑定Netlify，且必须使用A记录的话，可以直接ping一下你的Netlify二级域名地址得到的IP便可以作为域名解析，例如我的域名是ops-coffee.netlify.com，ping之后得到的地址是157.230.35.153，可以多ping几次得到不同的地址，都绑定到域名上以防止单节点故障</p>
+<p>国内也有类似于Github pages这样的服务，例如Gitee和Coding提供的pages服务，在速度方面要有不少的优势，但稳定性欠佳，且可能会面临层层审查域名备案等问题</p>
+<p>如果你的域名有备案，项目又是纯静态的话还可以考虑直接托管在国内的一些对象存储服务上，例如七牛云、腾讯云等，然后开启CDN加速，效果也不错，并且大多都有免费流量可以使用</p>
+<p>Github Pages和Netlify这种免费且可高度自定义的方案，在满足我们个性化需求的同时，省去了维护成本和资金压力，可以让站点活得更久，从而让我们把重点放在持续不断的输出内容，形成良性循环，赶紧试试吧</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://www.pdssyzfz.tk/post/shi-yong-bang-zhu/">
+                  <h3 class="post-title">
+                    使用帮助
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '52dc36140f103c5bc329',
+        clientSecret: '8332f25fe2812a4df2f42c8800e1eecbbbe5f0a8',
+        repo: 'Lzh2665692.github.io',
+        owner: 'Lzh2665692',
+        admin: ['Lzh2665692'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

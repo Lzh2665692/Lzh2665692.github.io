@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.pdssyzfz.tk</id>
+    <title>平顶山市一中附中</title>
+    <updated>2022-04-09T13:08:56.683Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.pdssyzfz.tk"/>
+    <link rel="self" href="https://www.pdssyzfz.tk/atom.xml"/>
+    <subtitle>平顶山一中附中论坛官方博客</subtitle>
+    <logo>https://www.pdssyzfz.tk/images/avatar.png</logo>
+    <icon>https://www.pdssyzfz.tk/favicon.ico</icon>
+    <rights>All rights reserved 2022, 平顶山市一中附中</rights>
+    <entry>
+        <title type="html"><![CDATA[Gridea 同步失败？谈谈我的解决办法]]></title>
+        <id>https://www.pdssyzfz.tk/post/gridea-tong-bu-shi-bai-tan-tan-wo-de-jie-jue-ban-fa/</id>
+        <link href="https://www.pdssyzfz.tk/post/gridea-tong-bu-shi-bai-tan-tan-wo-de-jie-jue-ban-fa/">
+        </link>
+        <updated>2022-04-09T08:42:52.000Z</updated>
+        <content type="html"><![CDATA[<p>前言<br>
+去年，我写了一篇文章【10 分钟教你创建个人网站——傻瓜式的网站搭建教学】，介绍如何运用 GitHub Pages 和 Gridea 搭建一个个人网站，时光飞逝，在我忙于应付高考的这一年中，也发生了不少事情。当我高考结束准备再创作的时候，我发现一个极其尴尬的问题—— Gridea 不能用了！</p>
+<p>（如图，Gridea 在点击同步按钮后，显示“同步发生了错误”）</p>
+<p>寻找原因<br>
+我意识到，可能是一年多没用了，版本太低才出现了这个问题，于是我一波操作打开 Gridea 官网，心说去年写那篇文章时我用的版本是 0.9.2，这么长时间想必更了不少版本吧——</p>
+<p>好家伙，一个版本都没更，这条解决方法算是没了，无奈，我打开 Gridea 的 issue ，简单一翻，果然有不少人有跟我一样的问题。这时我突然想到，Gridea 是使用 GitHub Pages 的，而 Github 在今年 3 月份因为某些众所周知的原因遭到了某个众所周知的系统的 SNI 阻断和端口封锁，导致了对 GitHub 的连接被严重干扰，那么有没有可能是因为这个原因导致了 Gridea 的同步失败呢，一波测试下来，果然，正是因为连接被严重干扰才导致了 Gridea 的同步失败。</p>
+<p>寻找解决方法<br>
+既然是因为众所周知对原因受到了干扰，那最简单的解决方法自然是让代理软件代理 Gridea 对网络的访问，但是偏偏 Gridea 走的不是普通路线，一般的代理软件即使是全局代理，也管不着 Gridea！我翻了翻 Gridea 项目的 issue，发现有人提到在 Windows 端 Proxifier 这个软件可以直接强制 Gridea 受到代理，但是很不幸，我用的是 macOS 系统。</p>
+<p>issue 中有人提到改 hosts 可以解决，但是我上面也说了，对 GitHub 的干扰主要是通过 SNI 阻断和封锁端口（也就是强制丢包），我认为改 hosts 也并非长久之计。</p>
+<p>难道真的没有办法可以在 macOS 上简单的使用 Gridea 吗？好在天无绝人之路，我在众多 issue 中找到了另一条路，即通过 GitHub Desktop 来将 Gridea 生成的网页文件上传到 GitHub。</p>
+<p>解决方法<br>
+如果能用四个字总结这个解决方案，那就是——曲线救国，既然 Gridea 本身的上传系统不行，那就找个软件来代替它的上传系统。</p>
+<p>首先就是下载 GitHub Desktop，这就是我们拿来顶替 Gridea 上传系统的软件，分析一下思路，我们需要的是用 GitHub Desktop 上传 Gridea 输出的现成的网页文件，通过查看 Gridea 目录可以得知，存放最终网页文件的文件夹是 output，因此我们只要拿 GitHub Desktop 上传这个文件夹到 GitHub 就可以了。</p>
+<p>考虑到上篇文章的受众，这里我先介绍如何找到 output 文件夹，大佬可以直接跳过。</p>
+<p>首先打开 Gridea，点击左下角的设置图标，进入设置。</p>
+<p>在设置中就可以看到源文件的完整路径。依照路径在文件管理器里找到 output 文件夹，不必进入，直接删除。</p>
+<p>这时打开 GitHub Desktop，会提示你登陆 GitHub 账号。</p>
+<p>登入后，在界面右侧选择对应的仓库。</p>
+<p>此时弹窗显示选择路径，在 Local path 一行填入路径（在上文找到的路径基础上加上 output，即代表生成一个 output 文件夹并将仓库内容 clone 至此）点击 Clone。</p>
+<p>然后打开 Gridea ，点击左侧的远程一栏，点击检查远程连接，结束后点击同步。（这一步可能会失败，没关系，因为我们不用 Gridea 的上传系统）</p>
+<p>打开 GitHub Desktop，点击右侧的 Push origin，这一步完成后即成功。</p>
+<p>请注意，以后再写了新文章要同步的时候，只需要点击同步，不需要检查远程连接。且在 GitHub Pages 中需要先在左侧的 Summary 内写出变动内容（我直接写 update，因为我懒），点击 Commit to master（如上图），然后再点 Push origin。</p>
+<p>总结<br>
+解决的教程到这里就结束了，这里简单说下思路。</p>
+<p>在前面我将这种方法称为移花接木，即用 GitHub Desktop 代替 Gridea 的文件上传系统，通过这种方式，Gridea 其实从一个集生成和上传为一体的方便工具变成了一个网页文件生成器。这时有些人应该看出来了，Gridea 的同步按钮对应的功能不仅仅是上传文件，还有生成网页文件这一步，这也解释了为什么在点击同步后遭遇失败却依然能够进行接下来的步骤。</p>
+<p>所有的内容到这里就彻底结束了，这里是 Sona，一个菜鸡准大学生，希望这篇文章能帮到你。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[完美解决国内访问github pages慢的方法]]></title>
+        <id>https://www.pdssyzfz.tk/post/wan-mei-jie-jue-guo-nei-fang-wen-github-pages-man-de-fang-fa/</id>
+        <link href="https://www.pdssyzfz.tk/post/wan-mei-jie-jue-guo-nei-fang-wen-github-pages-man-de-fang-fa/">
+        </link>
+        <updated>2022-04-09T04:11:39.000Z</updated>
+        <content type="html"><![CDATA[<p>Github Pages为Github提供的一项静态站点托管服务，它直接从Github仓库获取静态文件进行发布，然后提供一个github.io的二级域名供用户访问，支持绑定自定义域名，支持开启HTTPS，开启HTTPS会自动申请证书同时在证书过期前自动续签，这一切都是免费的，使用极其简单，只需要将你的静态文件提交到Github，然后开启Pages服务即可，我的博客就托管于Github Pages</p>
+<p>Github Pages免费且稳定的服务让我可以专注内容，而无需考虑成本及维护的问题，非常方便广受好评，但其最大的一个问题就是国内访问速度很慢，如何简单快速又低成本的解决这个问题呢？这里介绍一个服务：Netlify</p>
+<p>Netlify是一家提供静态网站托管的综合平台，支持自动从Github等仓库拉取代码并构建成静态网站进行发布，同时也支持自定义域名，自动申请SSL证书等功能，更为重要的是自动启用CDN加速，国内访问速度要快很多</p>
+<p>以下分别是Github Pages和Netlify两个平台同一项目请求速度的对比图<br>
+<img src="https://www.pdssyzfz.tk/post-images/1649477694280.png" alt="" loading="lazy"><br>
+从上图的测试结果可以看出国内各地的访问速度Netlify都能完胜，接下来详细介绍下如何通过Netlify给你的Github Pages加速</p>
+<p>Netlify<br>
+打开Netlify官网(https://www.netlify.com/)，点击右上角的Sign up注册账号，这里推荐关联Github账号<br>
+<img src="https://www.pdssyzfz.tk/post-images/1649477735113.png" alt="" loading="lazy"><br>
+关联认证后进入Netlify的后台页面，如下图，点击New site from Git</p>
+<p>选择网站源码托管的代码仓库类型，支持Github、Gitlab以及Bitbucket，选择GitHub</p>
+<p>然后会进入Github的认证授权页面，点击Authorize Netlify by Netlify</p>
+<p>点击Only select repositories选择要授权的Github仓库，当然也可以直接选择授权所有仓库，这个授权在设置中可以改</p>
+<p>授权完成回到Netlify后台页面，选择我们刚刚授权的Github仓库继续</p>
+<p>选择部署的用户以及分支，如果是一些需要编译的项目，还支持定义编译的命令以及最终发布的目录，纯静态网站的话都不需要填写，直接点击Deploy site即可完成部署</p>
+<p>部署完成后，Netlify会自动生成一个随机的二级域名xxx.netlify.com，我们可以修改为自定义的二级域名，点击Site Settings</p>
+<p>General -&gt; Site details下点击Change site name，可以为这个站点设置一个自定义的名字，二级域名也会相应改变</p>
+<p>如果你想绑定自己的域名，需要先在域名管理系统里新建解析，将域名CNAME指向到你的netlify二级域名，以阿里云为例如下</p>
+<p>然后进入Netlify管理后台，Domain management -&gt; Domains，点击Add domain alias，填入你的自定义域名</p>
+<p>待域名解析生效后就会看到新绑定的域名变为绿色，并且设置为了主域名</p>
+<p>最后为自定义域名开启HTTPS支持，Domain management -&gt; HTTPS，点击Verify DNS configuration，域名验证通过则会自动申请证书</p>
+<p>至此Netlify与Github绑定完成，可以通过自定义域名访问网站了，之后你每一次提交代码到Github，便会自动发布至Netlify，无需额外操作，非常方便</p>
+<p>其他说明<br>
+如果你是主域名要绑定Netlify，且必须使用A记录的话，可以直接ping一下你的Netlify二级域名地址得到的IP便可以作为域名解析，例如我的域名是ops-coffee.netlify.com，ping之后得到的地址是157.230.35.153，可以多ping几次得到不同的地址，都绑定到域名上以防止单节点故障</p>
+<p>国内也有类似于Github pages这样的服务，例如Gitee和Coding提供的pages服务，在速度方面要有不少的优势，但稳定性欠佳，且可能会面临层层审查域名备案等问题</p>
+<p>如果你的域名有备案，项目又是纯静态的话还可以考虑直接托管在国内的一些对象存储服务上，例如七牛云、腾讯云等，然后开启CDN加速，效果也不错，并且大多都有免费流量可以使用</p>
+<p>Github Pages和Netlify这种免费且可高度自定义的方案，在满足我们个性化需求的同时，省去了维护成本和资金压力，可以让站点活得更久，从而让我们把重点放在持续不断的输出内容，形成良性循环，赶紧试试吧</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用帮助]]></title>
+        <id>https://www.pdssyzfz.tk/post/shi-yong-bang-zhu/</id>
+        <link href="https://www.pdssyzfz.tk/post/shi-yong-bang-zhu/">
+        </link>
+        <updated>2022-04-04T09:21:37.000Z</updated>
+        <summary type="html"><![CDATA[<p>（一）注册问题<br>
+1.如何注册论坛<br>
+单击此处(https://www.pdssqz.tk/member.php?mod=RegisterX)进入注册页面，填写相关信息即可</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>（一）注册问题<br>
+1.如何注册论坛<br>
+单击此处(https://www.pdssqz.tk/member.php?mod=RegisterX)进入注册页面，填写相关信息即可</p>
+<!-- more -->
+<p>2.注册论坛要准备什么？<br>
+1、需要确认你的用户名和邮箱是否被注册过，选择一个没有人使用过的信息来注册，注册页面为：https://www.pdssqz.tk/member.php?mod=RegisterX，在用户名和Email栏输入你想注册的信息，如果被使用了，后面会有提示，预祝你的信息独一无二！<br>
+2、查看系统时间是否正确，包括年月日分钟，如果不正确可能造成验证码输入不正确，还可以清空下浏览器缓存和cookie。<br>
+3、前两步做好以后来到最重要的第三步：填写信息，点击注册，等待人工验证。此时你可以先浏览站内帖子，等待管理员。</p>
+<!-- more -->
+<p>3.为什么我的帐号是等待验证会员呢？<br>
+论坛为防止出现恶意注册论坛账号、贩卖论坛账号、发布广告、垃圾信息等恶意行为，故对注册流程做如下限制，请周知：<br>
+A、填写真实邮箱地址（需要邮箱验证才可注册成功），验证后才能成为正式会员进行发帖，等待验证会员是无法发帖、无法下载附件等功能的；<br>
+B、正确回答验证问题，填写验证码；<br>
+C、等待人工人员的验证，预计需要0-7天。</p>
+<!-- more -->
+<!-- more -->
+<p>（二）新手问题<br>
+1.我如何登录论坛？<br>
+如果您已经注册成为该论坛的会员，那么您只要通过访问页面右上的登录，进入登陆界面填写正确的用户名和密码（如果您设有安全提问，请选择正确的安全提问并输入对应的答案），点击“提交”即可完成登陆。<br>
+如果需要保持登录，请选择相应的 Cookie 时间，在此时间范围内您可以不必输入密码而保持上次的登录状态。</p>
+<!-- more -->
+<p>2.忘记我的登录密码，怎么办？<br>
+现行政策不允许邮件发出，因此站内的“忘记密码”功能暂时不可用，敬请谅解。<br>
+请联系管理员advice@pdssqz.tk解决，注意附上您的邮箱和用户名。</p>
+<!-- more -->
+<p>3.怎么通过邮箱验证呢？<br>
+现行政策不允许邮件发出，因此邮箱未验证不影响站点正常使用。<br>
+我们仍有可能向您发送人工邮件以验证您的身份，请务必在注册时使用真实邮箱。</p>
+<!-- more -->
+<p>4.注册后一个小时内应该做的事情是什么？<br>
+（1）注册好论坛后先等待人工验证通过；<br>
+（2）由于注册后的5分钟内无法发帖，请先熟悉论坛版规，比如论坛禁止灌水、禁止留下联系方式、打广告投放木马等，具体版规地址：https://www.pdssqz.tk/forum.php?mod=viewthread&amp;tid=7；<br>
+（3）激活后可以完善一下个人资料 https://www.pdssqz.tk/home.php?mod=spacecp ；<br>
+（4）熟悉积分运算法则 https://www.pdssqz.tk/home.php?mod=spacecp&amp;ac=credit&amp;op=rule 、了解所在用户组权限 https://www.pdssqz.tk/home.php?mod=spacecp&amp;ac=usergroup；<br>
+（5）搞完上边差不多也就可以发帖了，以后有什么问题，就来站点帮助你找找答案，我们会给你解答：https://www.pdssqz.tk/misc.php?mod=faq</p>
+<!-- more -->
+<p>5.我如何修改登录密码？<br>
+在设置面板中的“密码安全”，填写“旧密码”、“新密码”、“确认新密码”和“验证码”，点击“提交”，即可修改；如果忘记“登陆密码”可以退出登录，登录时选择“找回密码”进行恢复。</p>
+<!-- more -->
+<p>6.还有问题？<br>
+联系管理员advice@pdssqz.tk，说明问题和原因</p>
+<!-- more -->
+<!-- more -->
+<p>（三）其它问题<br>
+1.论坛账号没有了、账号被禁止访问了怎么办？<br>
+1、论坛不定期会清理长期未登录未激活的会员，清理后发公告，但不会对单独账号进行通知，可能会造成论坛账号消失；<br>
+2、有些可能账号被盗，在论坛发布色情信息和广告信息等严重影响论坛秩序的行为，账号会被直接删除，不做通知；<br>
+3、被禁止发言和访问的会员一般都有管理记录，操作原因都有注明，可以从此贴查阅：https://www.pdssqz.tk/forum.php?mod=misc&amp;action=showdarkroom</p>
+]]></content>
+    </entry>
+</feed>
