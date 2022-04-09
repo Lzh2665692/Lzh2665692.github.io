@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.pdssyzfz.tk</id>
     <title>平顶山市一中附中</title>
-    <updated>2022-04-09T13:08:56.683Z</updated>
+    <updated>2022-04-09T13:33:15.478Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.pdssyzfz.tk"/>
     <link rel="self" href="https://www.pdssyzfz.tk/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://www.pdssyzfz.tk/images/avatar.png</logo>
     <icon>https://www.pdssyzfz.tk/favicon.ico</icon>
     <rights>All rights reserved 2022, 平顶山市一中附中</rights>
+    <entry>
+        <title type="html"><![CDATA[Gridea 上手教程——小白也可以用的 GitHub Pages 搭建工具]]></title>
+        <id>https://www.pdssyzfz.tk/post/gridea-shang-shou-jiao-cheng-xiao-bai-ye-ke-yi-yong-de-github-pages-da-jian-gong-ju/</id>
+        <link href="https://www.pdssyzfz.tk/post/gridea-shang-shou-jiao-cheng-xiao-bai-ye-ke-yi-yong-de-github-pages-da-jian-gong-ju/">
+        </link>
+        <updated>2022-04-09T13:29:47.000Z</updated>
+        <content type="html"><![CDATA[<p>最近为了分享自己的学习心得，开始利用 GitHub Pages 搭建个人博客。但是水平实在太 ，所以没有选择主流的hexo，而是使用Gridea。初始配置简单，后续维护更是简单。对于我这种又懒又 的人来说再合适不过了。今天就总结出文章分享给大家。</p>
+<p>本地软件安装<br>
+Git 安装<br>
+Gridea 的同步功能依赖本地 Git 客户端，所以我们需要先安装 Git。 Git官网下载平台对应的安装程序。安装没有特别的要求，一路下一步即可。</p>
+<p>Gridea 安装<br>
+Gridea官网下载对应平台的安装程序进行安装。</p>
+<p>初始配置<br>
+GitHub Pages 创建<br>
+仓库创建<br>
+首先，需要创建一个仓库，建议仓库为 http://username.github.io。根据官方文档， GitHub 会默认将名称符合要求的仓库设置成 GitHub Pages 可访问类型。例如我的用户名是 yym0924，所以仓库名就是http://yym0924.github.io。不过我创建仓库的时候并未自动启用 GitHub Pages，遇到这种情况手动开启即可。</p>
+<p>基本设置<br>
+开通 GitHub Pages<br>
+这里也说明下手动启用 GitHub Pages 的方式。<br>
+<img src="https://www.pdssyzfz.tk/post-images/1649511121985.jpg" alt="" loading="lazy"><br>
+打开仓库的 Settings<br>
+<img src="https://www.pdssyzfz.tk/post-images/1649511160373.jpg" alt="" loading="lazy"><br>
+找到 GitHub Pages 设置的地方 点击 Choose a theme 随意选择一个主题。因为后续我们使用 Gridea 设置主题，这边选择主题只是为了开启 GitHub Pages 可访问类型。<br>
+勾选上 repo 相关权限即可</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Gridea 同步失败？谈谈我的解决办法]]></title>
         <id>https://www.pdssyzfz.tk/post/gridea-tong-bu-shi-bai-tan-tan-wo-de-jie-jue-ban-fa/</id>

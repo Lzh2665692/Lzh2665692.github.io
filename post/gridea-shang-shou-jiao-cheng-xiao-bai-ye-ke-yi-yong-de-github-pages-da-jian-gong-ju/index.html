@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Gridea 上手教程——小白也可以用的 GitHub Pages 搭建工具 | 平顶山市一中附中</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://www.pdssyzfz.tk/favicon.ico?v=1649511188981">
+<link rel="stylesheet" href="https://www.pdssyzfz.tk/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="最近为了分享自己的学习心得，开始利用 GitHub Pages 搭建个人博客。但是水平实在太 ，所以没有选择主流的hexo，而是使用Gridea。初始配置简单，后续维护更是简单。对于我这种又懒又 的人来说再合适不过了。今天就总结出文章分享给..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://www.pdssyzfz.tk">
+        <img src="https://www.pdssyzfz.tk/images/avatar.png?v=1649511188981" class="site-logo">
+        <h1 class="site-title">平顶山市一中附中</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://www.pdssyzfz.tk/post/shi-yong-bang-zhu" class="site-nav">
+            帮助
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      平顶山一中附中论坛官方博客
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://www.pdssyzfz.tk/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Gridea 上手教程——小白也可以用的 GitHub Pages 搭建工具</h2>
+            <div class="post-date">2022-04-09</div>
+            
+            <div class="post-content" v-pre>
+              <p>最近为了分享自己的学习心得，开始利用 GitHub Pages 搭建个人博客。但是水平实在太 ，所以没有选择主流的hexo，而是使用Gridea。初始配置简单，后续维护更是简单。对于我这种又懒又 的人来说再合适不过了。今天就总结出文章分享给大家。</p>
+<p>本地软件安装<br>
+Git 安装<br>
+Gridea 的同步功能依赖本地 Git 客户端，所以我们需要先安装 Git。 Git官网下载平台对应的安装程序。安装没有特别的要求，一路下一步即可。</p>
+<p>Gridea 安装<br>
+Gridea官网下载对应平台的安装程序进行安装。</p>
+<p>初始配置<br>
+GitHub Pages 创建<br>
+仓库创建<br>
+首先，需要创建一个仓库，建议仓库为 http://username.github.io。根据官方文档， GitHub 会默认将名称符合要求的仓库设置成 GitHub Pages 可访问类型。例如我的用户名是 yym0924，所以仓库名就是http://yym0924.github.io。不过我创建仓库的时候并未自动启用 GitHub Pages，遇到这种情况手动开启即可。</p>
+<p>基本设置<br>
+开通 GitHub Pages<br>
+这里也说明下手动启用 GitHub Pages 的方式。<br>
+<img src="https://www.pdssyzfz.tk/post-images/1649511121985.jpg" alt="" loading="lazy"><br>
+打开仓库的 Settings<br>
+<img src="https://www.pdssyzfz.tk/post-images/1649511160373.jpg" alt="" loading="lazy"><br>
+找到 GitHub Pages 设置的地方 点击 Choose a theme 随意选择一个主题。因为后续我们使用 Gridea 设置主题，这边选择主题只是为了开启 GitHub Pages 可访问类型。<br>
+勾选上 repo 相关权限即可</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://www.pdssyzfz.tk/post/gridea-tong-bu-shi-bai-tan-tan-wo-de-jie-jue-ban-fa/">
+                  <h3 class="post-title">
+                    Gridea 同步失败？谈谈我的解决办法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '52dc36140f103c5bc329',
+        clientSecret: '8332f25fe2812a4df2f42c8800e1eecbbbe5f0a8',
+        repo: 'Lzh2665692.github.io',
+        owner: 'Lzh2665692',
+        admin: ['Lzh2665692'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
