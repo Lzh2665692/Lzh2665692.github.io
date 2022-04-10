@@ -120,7 +120,7 @@ $(document).ready(function(){
                         src='https://www.pdssyzfz.tk/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://www.pdssyzfz.tk/images/avatar.png?v=1649556399291" class="avatar">
+            <img src="https://www.pdssyzfz.tk/images/avatar.png?v=1649559036858" class="avatar">
         </div>
         <div class="sitename">沙雕君</div>
         <span class="description" data-text='["愿我做一个可爱而又沙雕的人吧"]'>&nbsp;</span>
@@ -151,6 +151,9 @@ $(document).ready(function(){
         
         
         
+        
+        <a onclick="showWechat()"><i style="font-size: 20px;"><img class="icon"
+                    src="https://www.pdssyzfz.tk/media/images/wechat.png" alt=""></i></a>
         
         
         
@@ -208,6 +211,12 @@ $(document).ready(function(){
 
         
         
+            <div class="mchocie description">
+                <a data-pjax href="https://www.pdssyzfz.tk/bber" class="menubutton" style="margin-right: 15px;">
+                    <i><img class="icon menuicon" src="" alt="哔哔"></i>&nbsp;<span data-text="哔哔">哔哔</span>
+                </a>
+            </div>
+        
         
         <div class="mchocie description">
             <a data-pjax href="https://www.pdssyzfz.tk/friends" class="menubutton" style="margin-right: 15px;">
@@ -246,11 +255,25 @@ $(document).ready(function(){
                 href="https://github.com/850552586/gridea-theme-fog">Fog</a>
             <div>
                 
+                <div id="sitegotimeDate">载入天数...</div>
+                <div id="sitegotimes">载入时分秒...</div>
+                <div id="cussitetime" style="display:none">03/29/2022</div>
+                
             </div>
             <div>
                 
+                <script async
+                    src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/busuanzi.pure.mini.js"></script>
+                <div id="vistornum" style="margin:0">
+                    <span id="busuanzi_container_site_uv">
+                        <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> 总访问量:<span
+                            id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <i class="fa fa-user-o" aria-hidden="true"></i> 访问人数:<span id="busuanzi_value_site_uv"></span>
+                    </span>
+                </div>
+                
             </div>
-            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020-2022
+            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020-2022 备案：none
             </div>
         </div>
 
@@ -258,6 +281,38 @@ $(document).ready(function(){
 
     </div>
 </body>
+
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+
+    let intervalId = setInterval("createtime()", 250);
+</script>
 
     </div>
 
@@ -478,7 +533,7 @@ $(document).ready(function(){
     }
 
     function showWechat() {
-        var wechat = '';
+        var wechat = 'https://mp.weixin.qq.com/s/s4S6JSomPMCDVko-qSzewQ';
         alert("博主微信号：" + wechat);
         return false;
     }
@@ -600,13 +655,13 @@ $(document).ready(function(){
                 shareInit();
             if (donateChoice)
                 donateInit();
-            if ("default" == "default"&&!commentsHide) {
+            if ("valine" == "default"&&!commentsHide) {
                 $("#comment").hide()
                 commentsHide = true
             }
             lazyload();
             codeinit();
-            if ("default" == "twikoo") {
+            if ("valine" == "twikoo") {
                 //twikoo头像更换
                 setTimeout(replaceAvatar, 3000);
                 setTimeout(replaceAvatar, 8000); //部分博主站点速度加载过慢，再添加一个延迟
@@ -975,6 +1030,8 @@ menulist.eq(i).show();
         
         
         
+          <li><a data-pjax href="https://www.pdssyzfz.tk/bber" style="color:white">哔哔</a></li>
+          
           
         <li><a data-pjax href="https://www.pdssyzfz.tk/friends" style="color:white">友链</a></li>
 
@@ -1059,32 +1116,38 @@ menulist.eq(i).show();
                     <div id="comment" class="comment">
                         <div class="commentcontainer">
                            
-                                    
-                              
-                                           <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
-<script>
-
-  var gitalk = new Gitalk({
-    clientID: '52dc36140f103c5bc329',
-    clientSecret: '8332f25fe2812a4df2f42c8800e1eecbbbe5f0a8',
-    repo: 'Lzh2665692.github.io',
-    owner: 'Lzh2665692',
-    admin: ['Lzh2665692'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
-
-</script>
-
-                                                      
-                               
+                            
                                 
+        <div id="vcomments">
+        </div>
+        <script>
+            var valine = new Valine();
+            var curpath = window.location.pathname;
+            if (curpath[curpath.length - 1] != '/')
+                curpath += '/'
+            valine.init({
+                el: '#vcomments',
+                appId: '0baxDbW7BkGNWGfzerW1TgoV-MdYXbMMI',
+                appKey: 'CuXfwylopekHbpUiIxG4rkig',
+                avatar: 'retro',
+                pageSize: 10,
+                placeholder: '既然来了，何不畅所欲言呢？',
+                recordIP: true,
+                path: curpath //[重点] 记得添加path路径
+            });
+        </script>
+        <script type="text/javascript">
+            var jrsc = '既然来了，何不畅所欲言呢？';
+            jinrishici.load(function (result) {
+                // 自己的处理逻辑
+                jrsc = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin
+                    .dynasty + " · " + result.data.origin.author;
+            });
+        </script>
+
+
+                                    <div class="clear"></div>
+                              
                               
                           </div>
                       </div>
