@@ -3328,7 +3328,7 @@ a {
       }
     
         .description {
-          color: black;
+          color: #e03131;
         }
       
         .menubutton {
@@ -3375,5 +3375,9 @@ a {
       
         .navbar-inverse{
           background-color: rgba(143,168,171,0.8);
+        }
+      
+        .sitename{
+          font-family: kaiti;
         }
       
