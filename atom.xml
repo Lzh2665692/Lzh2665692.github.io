@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lzh2665692.github.io</id>
-    <title>搞机君</title>
-    <updated>2022-05-02T01:22:59.918Z</updated>
+    <title>子哥科技</title>
+    <updated>2022-05-02T01:39:26.279Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lzh2665692.github.io"/>
     <link rel="self" href="https://lzh2665692.github.io/atom.xml"/>
-    <subtitle>让我们一起聪明又智慧！</subtitle>
+    <subtitle>基础不牢，地动山摇。方法不对，努力白费</subtitle>
     <logo>https://lzh2665692.github.io/images/avatar.png</logo>
     <icon>https://lzh2665692.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2022, 搞机君</rights>
+    <rights>All rights reserved 2022, 子哥科技</rights>
     <entry>
         <title type="html"><![CDATA[Gridea同步失败，是Git代理问题？]]></title>
         <id>https://lzh2665692.github.io/post/gridea-tong-bu-shi-bai-shi-dai-li-wen-ti</id>
