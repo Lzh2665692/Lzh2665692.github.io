@@ -1,55 +1,199 @@
-<!-- <style>
-  #bber-talk{display:-webkit-flex;display:flex;width:100%;line-height:2em;height:45px;max-width:760px;text-align:left;padding:5px 15px;margin-bottom:3em;position: relative;background-color: var(--light-header);border-radius:8px;font-size:15px;}
-#bber-talk svg{fill: currentColor;vertical-align: middle;display: inline;margin-right:5px;}
-.talk-list{margin: 0;max-height: 35px;overflow: hidden;}
-.talk-list li {list-style: none;margin-bottom: 10px;width: 100%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
-</style>
-<div id="bber-talk"></div>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<script>
-  //依赖 jQuery 库，其中 jsonUrl 改为自己的
-$(document).ready(function(){
-  if ( $("#bber-talk").length > 0 ) {
-    jsonUrl = "https://7477-twikoo-6gbp33x72a40527e-1259442930.tcb.qcloud.la/json/bber.json"
-    $.getJSON(jsonUrl+"?t="+Date.parse( new Date()),function(res){
-      var bberHtml = ''
-      $.each(res.data, function(i, item){
-        d = new Date(item.date)
-        date = d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate() +' '+d.getHours()+':'+d.getMinutes()+':'+d.getSeconds()
-        dataTime = '<span class="datatime">'+date+'</span>'
-        bberHtml += '<li class="item item-'+(i+1)+'">'+dataTime+'： <a href="https://immmmm.com/bb/">'+item.content+'</a></li>'
-      });
-      $('#bber-talk').append('<span class="index-talk-icon"><svg viewBox="0 0 1024 1024" width="21" height="21"><path d="M184.32 891.667692c-12.603077 0-25.206154-2.363077-37.809231-7.876923-37.021538-14.966154-59.864615-49.624615-59.864615-89.009231v-275.692307c0-212.676923 173.292308-385.969231 385.969231-385.969231h78.76923c212.676923 0 385.969231 173.292308 385.969231 385.969231 0 169.353846-137.846154 307.2-307.2 307.2H289.083077l-37.021539 37.021538c-18.904615 18.116923-43.323077 28.356923-67.741538 28.356923zM472.615385 195.347692c-178.018462 0-322.953846 144.935385-322.953847 322.953846v275.692308c0 21.267692 15.753846 29.144615 20.48 31.507692 4.726154 2.363077 22.055385 7.876923 37.021539-7.08923l46.473846-46.473846c6.301538-6.301538 14.178462-9.452308 22.055385-9.452308h354.461538c134.695385 0 244.184615-109.489231 244.184616-244.184616 0-178.018462-144.935385-322.953846-322.953847-322.953846H472.615385z"></path><path d="M321.378462 512m-59.076924 0a59.076923 59.076923 0 1 0 118.153847 0 59.076923 59.076923 0 1 0-118.153847 0Z"></path><path d="M518.301538 512m-59.076923 0a59.076923 59.076923 0 1 0 118.153847 0 59.076923 59.076923 0 1 0-118.153847 0Z"></path><path d="M715.224615 512m-59.076923 0a59.076923 59.076923 0 1 0 118.153846 0 59.076923 59.076923 0 1 0-118.153846 0Z"></path></svg></span><ul class="talk-list">'+bberHtml+'</ul>')
-      Lately({ 'target': '#bber-talk .datatime' });
-    });
-    function Roll (){
-      var list_li = $('.talk-list li'),cur_li = list_li.first(),last_li = list_li.last();
-      last_li.after(cur_li);
-    };
-    setInterval(Roll,3000);
-  }
-});
-</script> -->
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <meta name="description" content="邮箱申请
+您需要它，现在就在这里！免费的NCCC学生电子邮件帐户！ NCCC想做可以改善您与您的教练和其他人之间的沟通的一切高校人员。我们很高兴宣布新的NCCC学生电子邮件系统作为Panther邮件或P-mail。每个注册学生都有一个免费的..." />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://lzh2665692.github.io/media/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://lzh2665692.github.io/media/css/live2d.css">
     <link rel="stylesheet" href="https://lzh2665692.github.io/styles/main.css">
-    <link rel="stylesheet" href="https://lzh2665692.github.io/media/css/font-awesome.css">
-    <meta name="description" content="子非鱼，安知鱼之乐....." />
-    <title>子哥的小破站</title>
+    <!-- 代码渲染风格css -->
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/default.min.css">
+    
+    <!-- 代码高亮插件 -->
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
+    <!-- 代码复制插件 -->
+    <script src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/clipboard.min.js"></script>
+    <!-- live2d插件 -->
+    <link rel="stylesheet" href="https://lzh2665692.github.io/media/css/live2d.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+    <!-- 数学公式 -->
+    
+    <title>堪萨斯州公立社区大学edu邮箱神奇教程</title>
+
+    <!-- 大纲索引css调整 -->
+    
+    <style>
+        .markdownIt-TOC {
+            margin-left: 28%;
+            padding-left: 2px;
+            width: 80%;
+        }
+
+        .markdownIt-TOC li {
+            padding-left: 8%;
+        }
+    </style>
+    
 </head>
 
-
 <body>
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+    <div id="domainname" style="display:none">https://lzh2665692.github.io</div>
     <div id="content">
-        <div class="nav-large">
-            <div class="row">
-                <div class="side"><head>
+        <div>
+            <!----------- 移动端导航栏👇 ----------------->
+            <div id="bar">
+                <style>
+  .navmobile {
+    z-index: 15;
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .navbar {
+      max-width: 100vw;
+    }
+  }
+
+  @media screen and (max-width:1200px) and (min-width: 768px) {
+    @media (min-width: 768px) {
+      .navbar-nav {
+        float: right;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .mbapspan {
+      padding: 0;
+    }
+  }
+</style>
+<div class="pjaxloading"  onclick="pjaxloadingClose()">
+  <div class="loadingbackground"></div>
+  <div id="loading">
+    <div class="loading">
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
+        aria-expanded="false" id="barbutton">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a data-pjax class="navbar-brand" style="color:white" href="https://lzh2665692.github.io">子哥的小破站&nbsp;&nbsp;|</a>
+      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
+          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="barmenu">
+      <ul class="nav navbar-nav">
+        
+        
+        <li>
+          <a data-pjax href="/" style="color:white">
+            首页
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/archives" style="color:white">
+            归档
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/tags" style="color:white">
+            标签
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="/post/about" style="color:white">
+            关于
+          </a>
+        </li>
+        
+        
+        
+        <li>
+          <a data-pjax href="https://www.pdssyzfz.tk/post/shi-yong-bang-zhu" style="color:white">
+            帮助
+          </a>
+        </li>
+        
+        
+        
+        
+          <li><a data-pjax href="https://lzh2665692.github.io/bber" style="color:white">哔哔</a></li>
+          
+          
+        <li><a data-pjax href="https://lzh2665692.github.io/friends" style="color:white">友链</a></li>
+
+        
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+  <!-- 引入jQuery核心js文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script>
+    let btstate = false;
+    var bt = $("#barbutton");
+    var bm = $("#barmenu");
+    bt.click(function () {
+      dropdown();
+    })
+    function dropdown() {
+      console.log(btstate);
+      //下拉
+      if (btstate == false) {
+        bt.removeClass("collapsed");
+        bt.attr("aria-expanded", "true");
+        bm.attr("aria-expanded", "true")
+        bm.fadeIn(700);
+        btstate = true;
+      }
+      else {
+        bt.addClass("collapsed");
+        bt.attr("aria-expanded", "false");
+        bm.removeClass("in");
+        bm.hide();
+        bm.attr("aria-expanded", "false");
+        btstate = false;
+      }
+    }
+  </script> 
+            </div>
+            <!----------- 移动端导航栏👆 ----------------->
+
+            <!--------------- pc端菜单栏👇 ---------------->
+            <div class="side"><head>
     <link rel="stylesheet" href="https://lzh2665692.github.io/media/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://lzh2665692.github.io/styles/main.css">
     
@@ -918,8 +1062,11 @@ menulist.eq(i).show();
     }
 </script>
 <!----夜间模式👆--></div>
-                <!-- ----------------左侧菜单栏html 👇-------------------------------------->
-                
+            <!--------------- pc端菜单栏👆 ---------------->
+
+            <!-- ----------------左侧菜单栏html 👇-------------------------------------->
+            
+            <div>
                 <div id="tab1" class="tab">
                     <div class="bars">
                         <span></span>
@@ -929,192 +1076,158 @@ menulist.eq(i).show();
                     <div class="close"></div>
                 </div>
                 <div class="col-md-1 col-lg-3"></div>
-                <div class="mobilebar"><style>
-  .navmobile {
-    z-index: 15;
-    max-height: 40vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
+                <!-- main标签，pjax渲染时加载以下内容👇 -->
+                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7" style="padding:0;">
+                    <div class="readingmode" onclick="readingmode()">阅</div>
+                    <link rel="stylesheet" href="https://lzh2665692.github.io/media/css/font-awesome.css">
 
-  @media screen and (max-width: 1200px) {
-    .navbar {
-      max-width: 100vw;
-    }
-  }
+<body>
+    <div class="allcontent" id="postdetail">
+        <div class="postshow postpadding" style="padding-bottom: 0;">
+            
+            <div class="postdetailimg">
+                
+                <img src="" class="postimage">
+                
+            </div>
+            <div class="postinfo-detail">
+                <div class="postdate"><i class="fa fa-calendar"></i>2022-05-12-0</div>
+            <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 5 min read</div>
+            <div class="posttag">
+                
+            </div>
+        </div>
+        
+        <div id="articlecontent">
+            <div id="texttitle" style="text-align: center">
+                <h2 id="ptitle">堪萨斯州公立社区大学edu邮箱神奇教程</h2>
+                <!-- id 将作为查询条件 -->
+                <div id="pl" style="display:none">https://lzh2665692.github.io/post/kan-sa-si-zhou-gong-li-she-qu-da-xue-edu-you-xiang-shen-qi-jiao-cheng</div>
+                <div id="rootaddr" style="display:none">https://lzh2665692.github.io</div>
+                
+                    
+                    <span id="hotnum">
+                        <h4><i class="fa fa-eye" aria-hidden="true" style="color: #FF8C00;"></i>&nbsp;&nbsp;热度</i>: <i
+                                class="hotnum">loading...</i></h4>
+                    </span>
+                    
+                
+            </div>
+            <div class="text ">
+                <p>邮箱申请<br>
+您需要它，现在就在这里！免费的NCCC学生电子邮件帐户！ NCCC想做可以改善您与您的教练和其他人之间的沟通的一切高校人员。我们很高兴宣布新的NCCC学生电子邮件系统作为Panther邮件或P-mail。每个注册学生都有一个免费的学生P-mail帐户。此帐户将是您和讲师之间电子邮件通讯的主要方法。 这项免费的网络服务为您提供： •2 GB的存储空间 •访问Facebook等网络站点 •您来自世界各地的大学电子邮件 •直接访问您的讲师和大学服务 •免费的日历程序，文档和电子表格阅读器等！ 学生电子邮箱域名信息:@student.neosho.edu. 申请地址：https://web.neosho.edu/ICS/Admissions/NCCC_Applications.jnz?portlet=EX_FormFlow_-_Forms&amp;screen=FormView&amp;form=d6ec08b9-5e2e-4e91-a1dd-062918a9a8ba<br>
+<img src="https://lzh2665692.github.io/post-images/1652321500947.png" alt="" loading="lazy"><br>
+申请美国堪萨斯州Neosho县公立社区大学EDU邮箱，建议使用堪萨斯州（Kansas）美国人信息资料。点击“NCCC Application”进行申请信息填写。生成工具：https://shenfendaquan.com/</p>
+<!-- more -->
+<p>申请成功<br>
+申请提交后需要等待三天，收到来自美国堪萨斯州Neosho县公立社区大学EDU邮箱发送的一封标题为「Welcome to NCCC! Student Account Information」的邮件，内含您的学生ID、学生EDU邮箱，具体等待时长以人品为准<br>
+<img src="https://lzh2665692.github.io/post-images/1652321603119.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>邮件内容如下翻译<br>
+“我们已经收到你的社区学院入学申请。我们谨代表学院全体教职员工，很高兴地通知你，你已经被录取了。 我们非常高兴地欢迎你加入我们的社区!作为NCCC的申请人，您现在可以通过myNeosho访问您的学生信息和学生电子邮件帐户https://web.neosho.edu/cs密码:此密码设置为社会保险号码的最后四个密码。myneosho 用户名NCCC学生邮箱(P-Mail)用户名:姓名lastname@student neosho。密码neosho +您的社会安全号码的最后四个diaed(例如:neosho1234)。</p>
+<!-- more -->
+<p>重要提示:要激活您的学生电邮帐户，您必须注册并接受“谷歌”的服务期限。在此完成之前，您将不能使用此帐户发送或接收电子邮件。学院的所有进一步联系将通过您的学生电子邮件帐户进行。您可以通过三个简单的步骤激活您的学生电子邮件帐户。要找到“学生电邮”登入网页，请到https://web.neosho.edulics，并在“快速连结”菜单内点击“学生电邮”连结。1. 登录2. 识别页面底部的验证码单词3.点击“l accept”。继续我的帐户’按钮。”</p>
+<!-- more -->
+<p>邮箱详情<br>
+美国堪萨斯州Neosho县公立社区大学EDU邮箱托管于谷歌教育全家桶，意思是登录方式是mail.google.com 收到欢迎邮件后即可使用firstname.lastname@后缀和初始密码neosho+SSN后4位登入谷歌使用</p>
+<!-- more -->
+<p>您的Panther邮件地址是：firstname.lastname@student.neosho.edu  如果有些学生的名字和姓氏相同，则某些学生可能在其后有一个数字 他们的名字，例如：john.smith2@student.neosho.edu 使用以下格式输入您的用户名和密码：用户名：firstname.lastname@student.neosho.edu 密码：neosho +社会安全号码的后四位 如果您的帐户是在2011年3月15日之前创建的，则您的密码将是：nc + SSN的后四位数字。<br>
+<img src="https://lzh2665692.github.io/post-images/1652321730549.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>密码示例：Peter Panther是一名学生，他的SSN是123-456-7899。 电子邮件地址：peter.panther@student.neosho.edu 用户名：peter.panther@student.neosho.edu 密码：neosho7899 如果在2011年3月15日之前创建，则密码为：nc7899 登录名不区分大小写。密码区分大小写，您应该使用所有小写字母。<br>
+<img src="https://lzh2665692.github.io/post-images/1652321758831.png" alt="" loading="lazy"></p>
+<!-- more -->
+<p>您的免费帐户随附了Microsoft Office产品阅读器和在线日历。如果您的讲师给您发送了电子表格或PowerPoint，则可以阅读无需购买昂贵的软件。这是一个网络系统，因此您可以访问您的P-mail通过任何在线计算机，您都不必在校园里。此帐户将保持有效即使您不再注册NCCC。无需付费即可保留。office在线版+OneDrive1T云储存空间。<br>
+修改密码地址：https://www.neosho.edu/Login/ctl/SendPassword?returnurl=https:www.neosho.edu/Login.aspx 如果您忘记了密码，将会向您发送带有密码重置链接的电子邮件。 单击该电子邮件中的链接，您将被带到一个页面，您可以在其中创建一个新密码。在此输入您的用户名。 在大多数情况下，这将是您的电子邮件地址<br>
+<img src="https://lzh2665692.github.io/post-images/1652321830282.png" alt="" loading="lazy"></p>
 
-  @media screen and (max-width:1200px) and (min-width: 768px) {
-    @media (min-width: 768px) {
-      .navbar-nav {
-        float: right;
-        margin: 0;
-      }
-    }
-  }
-
-  @media screen and (max-width:768px) {
-    .mbapspan {
-      padding: 0;
-    }
-  }
-</style>
-<div class="pjaxloading"  onclick="pjaxloadingClose()">
-  <div class="loadingbackground"></div>
-  <div id="loading">
-    <div class="loading">
-    </div>
-  </div>
-</div>
-<nav class="navbar navbar-inverse navbar-fixed-top navmobile">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barmenu"
-        aria-expanded="false" id="barbutton">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a data-pjax class="navbar-brand" style="color:white" href="https://lzh2665692.github.io">子哥的小破站&nbsp;&nbsp;|</a>
-      <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
-          style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="barmenu">
-      <ul class="nav navbar-nav">
+            </div>
+            <hr style="width: 80%;">
+            
+            <div class="donateContainer">
+                <span class="donatebtn">赏</span>
+            </div>
+            <div class="donateContainer">
+                <img src="" alt="" class="donate">
+            </div>
+            
+            <div class="postfooter">
+                <ul class="post-copyright">
+                    <li><strong>文章作者：</strong>沙雕君</li>
+            <li><strong>原文链接：</strong>https://lzh2665692.github.io/post/kan-sa-si-zhou-gong-li-she-qu-da-xue-edu-you-xiang-shen-qi-jiao-cheng</li>
+            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
+                许可协议。转载请注明出处！</li>
+            </ul>
+        </div>
         
-        
-        <li>
-          <a data-pjax href="/" style="color:white">
-            首页
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/archives" style="color:white">
-            归档
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/tags" style="color:white">
-            标签
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="/post/about" style="color:white">
-            关于
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a data-pjax href="https://www.pdssyzfz.tk/post/shi-yong-bang-zhu" style="color:white">
-            帮助
-          </a>
-        </li>
-        
-        
-        
-        
-          <li><a data-pjax href="https://lzh2665692.github.io/bber" style="color:white">哔哔</a></li>
-          
-          
-        <li><a data-pjax href="https://lzh2665692.github.io/friends" style="color:white">友链</a></li>
-
-        
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-
-  <!-- 引入jQuery核心js文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-  <script>
-    let btstate = false;
-    var bt = $("#barbutton");
-    var bm = $("#barmenu");
-    bt.click(function () {
-      dropdown();
-    })
-    function dropdown() {
-      console.log(btstate);
-      //下拉
-      if (btstate == false) {
-        bt.removeClass("collapsed");
-        bt.attr("aria-expanded", "true");
-        bm.attr("aria-expanded", "true")
-        bm.fadeIn(700);
-        btstate = true;
-      }
-      else {
-        bt.addClass("collapsed");
-        bt.attr("aria-expanded", "false");
-        bm.removeClass("in");
-        bm.hide();
-        bm.attr("aria-expanded", "false");
-        btstate = false;
-      }
-    }
-  </script> 
+            <div class="shareContainer">
+                <div class="share" style="height:30px;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://lzh2665692.github.io/media/images/qqs.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://lzh2665692.github.io/media/images/wechats.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://lzh2665692.github.io/media/images/weibos.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://lzh2665692.github.io/media/images/qzones.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://lzh2665692.github.io/media/images/doubans.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://lzh2665692.github.io/media/images/facebooks.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://lzh2665692.github.io/media/images/twitter.png" alt=""></i></a>
                 </div>
-                <div id="main" class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
-                    <div class="mobilebar">
-                        <img src="" alt="" class="plbg">
+            </div>
+            
+        <div id="otherpost">
+            
+            
+            <a data-pjax class="next-post-pc" href="https://lzh2665692.github.io/post/gridea-tong-bu-shi-bai-shi-dai-li-wen-ti"  style="color: black;">
+                <div id="npcontainer">
+                    
+                    
+                    <img src="" style="width: 100%;" class="opimg">
+                    
+                    
+                    <h4 class="optitle">Gridea同步失败，是Git代理问题？</h4>
+                </div>
+            </a>
+            <div class="next-post">
+                下一篇 <a  data-pjax href="https://lzh2665692.github.io/post/gridea-tong-bu-shi-bai-shi-dai-li-wen-ti">Gridea同步失败，是Git代理问题？</a>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+        <img class="modal-content" id="img01">
+    </div>
+</body>
 <script>
-    var bgchoice = "link";
-    if(bgchoice=='default')
-        var plbgurl = "/media/images/custom-mobilebg.jpg"
-    else  
-        var plbgurl = ""
-    $(".plbg").attr("src",plbgurl);
-    $(".plbg").fadeIn(200);
+    //文章阅读热度
+    var pl = $("#pl").html();
+    var rootaddr = $("#rootaddr").html();
+    pl = pl.replace(rootaddr, "");
+    $("#hotnum").attr('id', pl);
 </script>
+                    <div class="toc-container">
+                        
                     </div>
-                    <div id='speak'>
-</div>
-    <!-- 使用markdown渲染 -->
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" ></script> -->
-    <!-- 不使用markdown渲染 -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8"></script>
-    <!-- 解析微信表情（参考：https://github.com/buddys/qq-wechat-emotion-parser） -->
-    <!-- <script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js"></script> -->
-<script>
-    var limitstr = '5'
-    lnum = parseInt(limitstr)
-    ispeakBber.init({
-            el: '#speak', // 容器选择器
-            name: '', // 显示的昵称
-            envId: '', // 环境id
-            region: 'ap-shanghai', // 腾讯云地址，默认为上海
-            limit: lnum, // 每次加载的条数，默认为5
-            avatar: '',
-            fromColor: 'rgb(245, 150, 170)', // 下方标签背景颜色 默认 rgb(245, 150, 170)
-            loadingImg: 'https://7.dusays.com/2021/03/04/d2d5e983e2961.gif', // 自定义loading的图片，示例值为默认值
-            dbName: 'talks' // 数据的名称，默认talks，避免有人的命名不是这个，所以加入此配置字段。
-        })
-        .then(function () {
-            // 哔哔加载完成后的回调函数，你可以写你自己的功能
-            console.log('哔哔 加载完成')
-    })
-</script>
+                    <div class="tog">
+                        <div class="toggleContainer">
+                            <div class="toggle">
+                                <i class="fas fa-angle-double-up"></i>
+                            </div>
+                        </div>
+                    </div>
                     <!---------------------------- 评论系统👇 ------------------------->
                     <div id="comment" class="comment">
                         <div class="commentcontainer">
-                           
                             
                                 
+                                    
         <div id="vcomments">
         </div>
         <script>
@@ -1144,42 +1257,52 @@ menulist.eq(i).show();
 
 
                                     <div class="clear"></div>
-                              
-                              
-                          </div>
-                      </div>
-                     <!---------------------------- 评论系统👆 ------------------------->
+                                
+                            
+                        </div>
+                    </div>
+                    <!---------------------------- 评论系统👆 ------------------------->
                 </div>
+                <!-- main标签，pjax渲染时加载以上内容👆 -->
                 <div class="col-md-1 col-lg-2"></div>
-                <!-- ----------------左侧菜单栏html 👆-------------------------------------->
-                <!------------------ 顶部菜单栏html👇--------->
-                
-                <!------------------ 顶部菜单栏html👆--------->
-                <div class="col-xs-6 col-sm-3"></div>
+                <div id="bg">
+                </div>
             </div>
+            <!-- ----------------左侧菜单栏html 👆-------------------------------------->
             
         </div>
-        <div id="bg">
-        </div>
-        <!------- 背景图加载方式👇----- -->
-        <div id="bgchoice" style="display: none">link
-            </div>
+        <!-- aplayer播放器加载👇 -->
             
-            <div id="bgurl" style="display:none"></div>
-               
-        <!------- 背景图加载方式👆----- -->
+        <!-- aplayer播放器加载👆 -->
     </div>
-
-        <div id="landlord">
-            <div class="message" style="opacity:0"></div>
-            <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
-        </div>
-        <div id="domainname" style="display:none">https://lzh2665692.github.io
-        </div>
+    <!-- 背景图加载方式👇 -->
+    <div id="bgchoice" style="display: none">link
+                </div>
+                
+                <div id="bgurl" style="display:none"></div>
+                
+    <!-- 背景图加载方式👆 -->
 </body>
 
-</html>
-<!-------------------- live2d功能👇 --------------------------->
+<script>
+    //初始化
+    //更换twikoo头像
+    setTimeout(replaceAvatar,1000);
+    setTimeout(replaceAvatar,2000);
+    setTimeout(replaceAvatar,8000);
+    // --------为每张图片添加懒加载（lazyload）标签-->懒加载功能 👇------------
+    lazyload();
+    //为文章内所有代码块添加代码复制功能 👇
+    codeinit();
+    // ------代码高亮显示功能-------------
+    hljs.initHighlightingOnLoad();
+    if (shareChoice)
+        shareInit();
+    if (donateChoice)
+        donateInit();
+</script>
+
+<!------------------ 加载live2d模型功能（看板娘）👇 ---------------->
 
 <script type="text/javascript">
     var message_Path = '/live2d/'
@@ -1191,7 +1314,29 @@ menulist.eq(i).show();
     loadlive2d("live2d", "https://lzh2665692.github.io/media/live2d/assets/tororo.model.json");
 </script>
 
-<!-------------------- live2d功能👆 --------------------------->
+<!------------------ 加载live2d模型功能（看板娘）👆 ---------------->
+
+
+<!----------------------- 返回顶部按钮功能👇 --------------------->
+<script>
+    $(function () {
+        $('.toggleContainer').click(function () {
+            $('html,body').animate({
+                scrollTop: '0px'
+            }, 800);
+        });
+        $(window).scroll(function () {
+            var st = $(window).scrollTop();
+            if (st > 30) {
+                $(".toggleContainer").fadeIn(400);
+            } else {
+                $(".toggleContainer").fadeOut(100);
+            }
+        });
+    });
+</script>
+<!----------------------- 返回顶部按钮功能👆 --------------------->
+
 
 <!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 <script>
@@ -1212,4 +1357,29 @@ menulist.eq(i).show();
 </script>
 <!------------ 加载全局背景图功能👆（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 
+
+
+
 <script src="https://lzh2665692.github.io/media/js/index.js"></script>
+
+
+<script>
+    //加载后的事件同步（阅读量、移动端评论等
+    window.onload = function () {
+    //代码块高亮渲染
+    document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+    });
+        getHotnum();
+        var sharepc = $(".share").eq(0).html();
+        $(".share").eq(1).html(sharepc);   //插件只会寻找一个分享标签渲染，所以需要手动添加到移动端
+        aplayerbtnInit();
+        $(".hljs").css({
+            "padding": "20px"
+        })
+    }
+</script>
+
+<!-- <script src="https://lzh2665692.github.io/media/js/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@3.13.0/dist/av-min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.6.1/dist/av-live-query-min.js"></script> -->
