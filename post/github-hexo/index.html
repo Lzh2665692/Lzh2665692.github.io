@@ -10,14 +10,14 @@
 <meta name="keywords" content="">
 <meta name="description" content="欢迎访问[子哥の小破站]的个人博客">
 <meta name="author" content="kveln">
-<title>SSL证书为什么价格差距那么大？哪款SSL证书的性价比高? | 子哥の小破站</title>
+<title>Github Pages+Hexo 搭建静态博客 | 子哥の小破站</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="SSL证书为什么价格差距那么大？哪款SSL证书的性价比高? | 子哥の小破站 » Feed"
+<link rel="alternate" type="application/rss+xml" title="Github Pages+Hexo 搭建静态博客 | 子哥の小破站 » Feed"
   href="https://lzh2665692.github.io/atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -30,8 +30,8 @@
 
 <script>hljs.initHighlightingOnLoad();</script>
 
-  <meta property="og:description" content="SSL证书为什么价格差距那么大？哪款SSL证书的性价比高?" />
-  <meta property="og:url" content="https://lzh2665692.github.io/post/ssl-zheng-shu-wei-shi-me-jie-ge-chai-ju-na-me-da-na-kuan-ssl-zheng-shu-de-xing-jie-bi-gao" />
+  <meta property="og:description" content="Github Pages+Hexo 搭建静态博客" />
+  <meta property="og:url" content="https://lzh2665692.github.io/post/github-hexo" />
   <meta property="og:locale" content="zh-CN" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="子哥の小破站" />
@@ -164,10 +164,10 @@
               <span class="tags">
                 
               </span>
-              <h1>SSL证书为什么价格差距那么大？哪款SSL证书的性价比高?</h1>
+              <h1>Github Pages+Hexo 搭建静态博客</h1>
               <span class="meta">
                 Posted on
-                2022-07-10-0，4 min read
+                2022-07-10-0，5 min read
               </span>
             </div>
           
@@ -182,107 +182,177 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto post-content-container">
           
-          <p><a href="https://baike.baidu.com/item/SSL%E8%AF%81%E4%B9%A6/5201468">SSL证书</a>市场品牌和种类众多，用户在选择证书的时候，也能随心所欲的购买到心仪的证书品牌类型。<br>
-但是也有不少用户在选购的时候，也不禁有疑问：不同的证书品牌和类型为什么价格相差如此之大？</p>
-<p>确实，有的证书很便宜，甚至是免费使用，但是有的证书价格却高的出奇。出现这样情况的原因主要是由于品牌和证书类型，以及证书的售后服务方面的原因导致的。</p>
-<h1 id="证书价格差异大的原因">证书价格差异大的原因</h1>
+          <p>本文讲述的Hexo博客搭建主要是配合GitHub来进行部署，不需要购买任何服务器。</p>
+<h2 id="搭建大致分为三个流程准备工作-安装hexo以及部署在github下面介绍详细流程-ps本博客就是使用hexogithub的方法搭建的">搭建大致分为三个流程：准备工作、安装Hexo以及部署在GitHub，下面介绍详细流程。<br>
+（PS：本博客就是使用Hexo+GitHub的方法搭建的）</h2>
+<h1 id="一准备工作">一：准备工作</h1>
+<h2 id="1-下载nodejs并进行安装详见注意事项">1、下载<a href="https://nodejs.org/en/">Node.js</a>，并进行安装（详见注意事项）</h2>
+<blockquote>
+<p>1.双击打开安装包<br>
+2.疯狂点击下一步进行安装</p>
+</blockquote>
 <!--more-->
-<h2 id="1-证书品牌不同">1、证书品牌不同</h2>
-<p>不同品牌的SSL证书在价格上差距较大，主要是因为证书的产品质量有所区别。部分大品牌证书厂商证书签发历史悠久，对产品有较强的专业研究，安全保密性有保障。<br>
-同时产品的兼容性等也较好，对目前市场上的主流浏览器有良好的兼容性，用户在安装部署后浏览器地址栏都会显示地址是安全提示。</p>
-<h2 id="2-证书类型不同">2、证书类型不同</h2>
-<p>DV、OV、EV是目前使用较多的SSL证书类型，其中DV证书的签发验证流程最为简单，用户在申请的时候仅验证域名信息，签发速度快，价格是这三类证书中最低的。<br>
-OV和EV证书验证流程则是相对复杂些，相较于DV证书，增加了人工核验环节，严谨性可以得到保证。<br>
-另外，EV证书在部署安装后，在浏览器的地址栏会显示用户公司的名称信息，网站的可信度进一步提升。验证流程的严谨和功能的多样化使得EV证书成为这几种证书中价格价格最高的。</p>
-<p>除此之外，每种证书类型根据域名数量的不同，价格也会有区别。保护单域名的价格较低，而保护多域名和通配符价格较高。</p>
-<h2 id="3-售后保障不同">3、售后保障不同</h2>
-<p>从经济学角度来说，证书也属于商品。而在市场经济活动中，所有商品在出售以后，难免会涉及售后的问题。</p>
-<p>SSL证书特别之处在于，它是用来保护用户的数据信息安全，一旦出现问题给客户造成的损失难以预估。所以，售后保障也是各大证书厂商极为重视的问题。<br>
-一些价格较高的证书品牌，证书厂商都已经为其投入了高额的赔付保障，真正能做到让用户售后无忧。</p>
-<h1 id="常见的证书价格">常见的证书价格</h1>
-<p>这里从腾讯云官网里找到了一些SSL证书的价格，均指首年价格，后续订阅的价格得花更多的钱。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:right">证书品牌</th>
-<th style="text-align:right">支持域名</th>
-<th style="text-align:right">证书型号</th>
-<th style="text-align:right">单价</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">DNSPod</td>
-<td style="text-align:right">单个域名</td>
-<td style="text-align:right">域名型（DV）SSL 证书</td>
-<td style="text-align:right">560元/年</td>
-</tr>
-<tr>
-<td style="text-align:right">SecureSite</td>
-<td style="text-align:right">单个域名</td>
-<td style="text-align:right">企业型（OV）SSL 证书</td>
-<td style="text-align:right">5000元/年</td>
-</tr>
-<tr>
-<td style="text-align:right">GeoTrust</td>
-<td style="text-align:right">单个域名</td>
-<td style="text-align:right">企业型（OV）SSL 证书</td>
-<td style="text-align:right">2850元/年</td>
-</tr>
-<tr>
-<td style="text-align:right">GlobalSign</td>
-<td style="text-align:right">单个域名</td>
-<td style="text-align:right">企业型（OV）SSL 证书</td>
-<td style="text-align:right">3728元/年</td>
-</tr>
-<tr>
-<td style="text-align:right">WoTrus</td>
-<td style="text-align:right">单个域名</td>
-<td style="text-align:right">域名型（DV）SSL 证书</td>
-<td style="text-align:right">488元/年</td>
-</tr>
-<tr>
-<td style="text-align:right">DNSPod（SM2）</td>
-<td style="text-align:right">单个域名</td>
-<td style="text-align:right">域名型（DV）SSL 证书</td>
-<td style="text-align:right">880元/年</td>
-</tr>
-</tbody>
-</table>
-<p>总之，对我这个草根站长来说，就是“买不起，真的买不起”。</p>
-<h1 id="非常良心国产ssl品牌lets-encrypt">非常良心国产SSL品牌——<a href="https://www.mianfeissl.com/">Let's Encrypt</a></h1>
-<p>Let's Encrypt目前已基于全球可信根，创新推出全新一代可自动化部署的自主品牌SSL证书。推出了90天的试用，并且可以无限续签。<br>
-这对喜欢白嫖的草根站长来说就很好了。<br>
-<img src="http://www2.zgtech.top/?/images/2022/07/09/yRkU5eGFT2/Let%27s%20Encrypt.png" alt="Let's Encrypt" loading="lazy"></p>
-<p>免费版的包括<code>单域名证书</code>、<code>通配符证书</code>、<code>多域名证书</code>。<br>
-<img src="http://www2.zgtech.top/?/images/2022/07/09/VkwNPVrw43/Let%27s%20Encrypt2.png" alt="Let's Encrypt" loading="lazy"></p>
+<h2 id="2-下载git并进行安装">2、下载<a href="https://git-scm.com/">Git</a>，并进行安装</h2>
+<blockquote>
+<p>依旧按照上述步骤进行安装</p>
+</blockquote>
+<h1 id="二-启用github-pages">二、启用Github Pages</h1>
+<h2 id="申请github账号">申请<a href="https://www.github.com">github</a>账号</h2>
+<p>这里xxx填写你的github账户名称。如图：<br>
+<img src="https://pic1.zhimg.com/80/v2-a761fd5075def14d3d4f86f79ac96e00_720w.jpg" alt=" _config.yml 文件" loading="lazy"><br>
+<img src="https://pic4.zhimg.com/80/v2-92c1ec388326d59f35cadb260543896f_720w.jpg" alt=" _config.yml 文件" loading="lazy"></p>
+<h2 id="创建一个新的仓库">创建一个新的仓库</h2>
+<p>命名为【你的用户名】.github.io<br>
+<img src="https://pic1.zhimg.com/80/v2-a6e50750d8df0d0a4ef24a5229300140_720w.jpg" alt="示例" loading="lazy"><br>
+<img src="https://pic2.zhimg.com/80/v2-d8c2ec23f78635dcf9873c202f8aebdd_720w.jpg" alt="示例" loading="lazy"></p>
+<h1 id="三-安装hexo">三、安装Hexo</h1>
+<ul>
+<li>打开<code>Node.js</code>下的<code>command prompt</code>面板，分别输入以下命令（检测软件配置是否安装成功）</li>
+</ul>
+<blockquote>
+<p>输出了版本号，那么证明配置成功<br>
+如果没有版本号，请重新安装node.js，检查是否勾选Add to Path，或者手动为node.js添加环境变量</p>
+</blockquote>
+<p>(<code>) node -v npm -v (</code>)</p>
+<ul>
+<li>
+<p>安装hexo和hexo服务器模块<br>
+(<code>) npm install hexo-cli -g npm install hexo-server --save (</code>)</p>
+</li>
+<li>
+<p>生成博客文件夹</p>
+</li>
+</ul>
+<blockquote>
+<p>直接在自己心仪的路径上右键生成文件夹，名称随意<br>
+例如： D:\hexo</p>
+</blockquote>
+<ul>
+<li>
+<p>切换command prompt的目录到新建的hexo文件路径，命令如下<br>
+<code>cd D:\hexo</code></p>
+</li>
+<li>
+<p>执行<code>hexo init</code>命令，进行博客初始化</p>
+</li>
+<li>
+<p>测试hexo是否安装成功：<br>
+(<code>) hexo new test hexo clean hexo s hexo g hexo d (</code>)</p>
+</li>
+</ul>
+<blockquote>
+<p>其中hexo new test表示新建一篇名为test的博文，hexo g表示生成，是hexo generate的简写，hexo s在本地运行hexo服务器，是hexo server的简写。<br>
+成功后会有如下提示，进入 http://localhost:4000 即可看到刚刚生成的网页<br>
+<img src="https://pic1.zhimg.com/80/v2-813612ad36af17b81ca742b8396e9564_720w.jpg" alt="Hexo 示例" title="Hexo 示例" loading="lazy"><br>
+以下为配置完成后的样子，可能和你生成的页面不同，如果想配置和我一样的hexo可以继续阅读我的其他post。</p>
+</blockquote>
+<h1 id="三-配置到github-pages">三、配置到Github Pages</h1>
+<p>之前的操作只是在本地实现了我们的博客，如何推送到github pages呢？</p>
+<ul>
+<li>
+<p>首先，打开博客目录下的 _config.yml 文件<br>
+<img src="http://www2.zgtech.top/?/images/2022/07/09/7o1Ak1pvEy/Hexo%20%E7%A4%BA%E4%BE%8B.png" alt=" _config.yml 文件" title="_config.yml 文件" loading="lazy"></p>
+</li>
+<li>
+<p>使用 ctrl+f 搜索deploy，并添加以下代码。注意！把xxx改为之前在github配置的名字即可。<br>
+(```)<br>
+deploy:</p>
+</li>
+<li>
+<p>type: git<br>
+repo: https://github.com/xxx/xxx.github.io.git<br>
+branch: master<br>
+(```)</p>
+</li>
+<li>
+<p>接下来，安装<code>hexo-deployer-git</code>插件<br>
+<code>npm install hexo-deployer-git --save</code></p>
+</li>
+<li>
+<p>最后就可以推送我们的网页到github啦！<br>
+(<code>) hexo g hexo d (</code>)</p>
+</li>
+</ul>
+<h1 id="四-完善">四、完善</h1>
+<h2 id="访问网页">访问网页</h2>
+<p>如果之前的步骤都是正确的话，那么恭喜你！你已经可以访问你的网页了！</p>
+<p>比如我的网页： <a href="https://zigetech.github.io">zigetech.github.io</a></p>
+<p>把zigetech改成你的github用户名即可</p>
+<h2 id="绑定你自己的域名可选">绑定你自己的域名（可选）</h2>
+<ul>
+<li>如果你已经拥有你自己的域名的话那是最好，如果你想购买一个域名，可以去<a href="https://dnspod.cloud.tencent.com/">腾讯云</a>，购买。<br>
+如果你不想花钱还想（<s>白嫖</s>）用自定义域名的的话，可以参考我的另一篇<a href="https://www.zigecn.eu.org/65fc21bd.html">博文</a>进行申请。</li>
+</ul>
+<p>由于我的域名使用的是<a href="https://dash.cloudflare.com/8082e5ab771bb1a1c2b3fa66c1248a59">Cloudflare</a>，接下来我会演示如何绑定你的github pages到Cloudflare，其他域名商操作应该也是雷同的。</p>
+<ul>
+<li>
+<p>登录你的Cloudflare后台，点击<code>DNS</code>.添加一条CNAME记录，如图：<br>
+![DNS解析](http://www2.zgtech.top/?/images/2022/07/09/eZjlLhU2Fm/DNS%E8%A7%A3%E6%9E%90.png “DNS解析”)</p>
+</li>
+<li>
+<p>其中CNAME的值就填写你的github page的值（也就是上文你注册过的仓库的名字），<br>
+![DNS解析](https://pic2.zhimg.com/80/v2-214e0d6b077b908c1dd9adc044996505_720w.jpg “DNS解析”)</p>
+</li>
+<li>
+<p>最后一步，在你本地 /source 文件夹下添加一个名为CNAME的文件（注意，此文件没有后缀），在文件中里面写上你的域名即可。<br>
+![CNAME文件填写](http://www2.zgtech.top/?/images/2022/07/09/INCvyI6930/CNAME%E6%96%87%E4%BB%B6%E5%A1%AB%E5%86%99.png “CNAME文件填写”)</p>
+</li>
+<li>
+<p>再次执行deploy<br>
+(<code>) hexo g hexo d (</code>)</p>
+</li>
+<li>
+<p>稍等几分钟，你就可以用自己的域名访问你的网站啦！<br>
+![我的博客](http://www2.zgtech.top/?/images/2022/07/09/GbOwqJJfx6/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2.png “我的博客”)</p>
+</li>
+</ul>
+<h1 id="最后的最后">最后的最后</h1>
+<p>本文介绍了基本的hexo + github page的部署及实现，如果有任何问题，欢迎留言！</p>
 
           <div class="toc-container"><ul class="markdownIt-TOC">
-<li><a href="#%E8%AF%81%E4%B9%A6%E4%BB%B7%E6%A0%BC%E5%B7%AE%E5%BC%82%E5%A4%A7%E7%9A%84%E5%8E%9F%E5%9B%A0">证书价格差异大的原因</a>
+<li>
 <ul>
-<li><a href="#1-%E8%AF%81%E4%B9%A6%E5%93%81%E7%89%8C%E4%B8%8D%E5%90%8C">1、证书品牌不同</a></li>
-<li><a href="#2-%E8%AF%81%E4%B9%A6%E7%B1%BB%E5%9E%8B%E4%B8%8D%E5%90%8C">2、证书类型不同</a></li>
-<li><a href="#3-%E5%94%AE%E5%90%8E%E4%BF%9D%E9%9A%9C%E4%B8%8D%E5%90%8C">3、售后保障不同</a></li>
+<li><a href="#%E6%90%AD%E5%BB%BA%E5%A4%A7%E8%87%B4%E5%88%86%E4%B8%BA%E4%B8%89%E4%B8%AA%E6%B5%81%E7%A8%8B%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C-%E5%AE%89%E8%A3%85hexo%E4%BB%A5%E5%8F%8A%E9%83%A8%E7%BD%B2%E5%9C%A8github%E4%B8%8B%E9%9D%A2%E4%BB%8B%E7%BB%8D%E8%AF%A6%E7%BB%86%E6%B5%81%E7%A8%8B-ps%E6%9C%AC%E5%8D%9A%E5%AE%A2%E5%B0%B1%E6%98%AF%E4%BD%BF%E7%94%A8hexogithub%E7%9A%84%E6%96%B9%E6%B3%95%E6%90%AD%E5%BB%BA%E7%9A%84">搭建大致分为三个流程：准备工作、安装Hexo以及部署在GitHub，下面介绍详细流程。<br>
+（PS：本博客就是使用Hexo+GitHub的方法搭建的）</a></li>
 </ul>
 </li>
-<li><a href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%AF%81%E4%B9%A6%E4%BB%B7%E6%A0%BC">常见的证书价格</a></li>
-<li><a href="#%E9%9D%9E%E5%B8%B8%E8%89%AF%E5%BF%83%E5%9B%BD%E4%BA%A7ssl%E5%93%81%E7%89%8Clets-encrypt">非常良心国产SSL品牌——Let's Encrypt</a></li>
+<li><a href="#%E4%B8%80%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">一：准备工作</a>
+<ul>
+<li><a href="#1-%E4%B8%8B%E8%BD%BDnodejs%E5%B9%B6%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85%E8%AF%A6%E8%A7%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">1、下载Node.js，并进行安装（详见注意事项）</a></li>
+<li><a href="#2-%E4%B8%8B%E8%BD%BDgit%E5%B9%B6%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85">2、下载Git，并进行安装</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C-%E5%90%AF%E7%94%A8github-pages">二、启用Github Pages</a>
+<ul>
+<li><a href="#%E7%94%B3%E8%AF%B7github%E8%B4%A6%E5%8F%B7">申请github账号</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E4%BB%93%E5%BA%93">创建一个新的仓库</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89-%E5%AE%89%E8%A3%85hexo">三、安装Hexo</a></li>
+<li><a href="#%E4%B8%89-%E9%85%8D%E7%BD%AE%E5%88%B0github-pages">三、配置到Github Pages</a></li>
+<li><a href="#%E5%9B%9B-%E5%AE%8C%E5%96%84">四、完善</a>
+<ul>
+<li><a href="#%E8%AE%BF%E9%97%AE%E7%BD%91%E9%A1%B5">访问网页</a></li>
+<li><a href="#%E7%BB%91%E5%AE%9A%E4%BD%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D%E5%8F%AF%E9%80%89">绑定你自己的域名（可选）</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9C%80%E5%90%8E%E7%9A%84%E6%9C%80%E5%90%8E">最后的最后</a></li>
 </ul>
 </div>
           
           <hr />
           <p class="next-post">下一篇：
-            <a href="https://lzh2665692.github.io/post/office-365-e5-zhang-hao-shen-qing-ji-yong-jiu-xu-qi-jiao-cheng">
+            <a href="https://lzh2665692.github.io/post/zhe-li-shi-zi-ge-noxiao-po-zhan">
               <span class="post-title">
-                Office 365 E5 账号申请及永久续期教程&rarr;
+                这里是子哥の小破站&rarr;
               </span>
             </a>
           </p>
           
           <div class="comment" style="text-align: center;">
             
-            <span id="/post/ssl-zheng-shu-wei-shi-me-jie-ge-chai-ju-na-me-da-na-kuan-ssl-zheng-shu-de-xing-jie-bi-gao/" class="leancloud_visitors"
-              data-flag-title="SSL证书为什么价格差距那么大？哪款SSL证书的性价比高?">
+            <span id="/post/github-hexo/" class="leancloud_visitors"
+              data-flag-title="Github Pages+Hexo 搭建静态博客">
               <em class="post-meta-item-text">阅读量 </em>
               <i class="leancloud-visitors-count">loading...</i>
             </span>
