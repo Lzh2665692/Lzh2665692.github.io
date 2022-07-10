@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lzh2665692.github.io</id>
     <title>子哥の小破站</title>
-    <updated>2022-07-10T07:33:03.824Z</updated>
+    <updated>2022-07-10T07:36:02.909Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lzh2665692.github.io"/>
     <link rel="self" href="https://lzh2665692.github.io/atom.xml"/>
@@ -16,17 +16,7 @@
         <link href="https://lzh2665692.github.io/post/github-hexo">
         </link>
         <updated>2022-07-10T02:51:46.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="序言">序言</h1>
-<h2 id="本文讲述的hexo博客搭建主要是配合github来进行部署不需要购买任何服务器-搭建大致分为三个流程准备工作-安装hexo以及部署在github下面介绍详细流程-ps本博客就是使用hexogithub的方法搭建的">本文讲述的Hexo博客搭建主要是配合GitHub来进行部署，不需要购买任何服务器。<br>
-搭建大致分为三个流程：准备工作、安装Hexo以及部署在GitHub，下面介绍详细流程。<br>
-（PS：本博客就是使用Hexo+GitHub的方法搭建的）</h2>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="序言">序言</h1>
-<h2 id="本文讲述的hexo博客搭建主要是配合github来进行部署不需要购买任何服务器-搭建大致分为三个流程准备工作-安装hexo以及部署在github下面介绍详细流程-ps本博客就是使用hexogithub的方法搭建的">本文讲述的Hexo博客搭建主要是配合GitHub来进行部署，不需要购买任何服务器。<br>
-搭建大致分为三个流程：准备工作、安装Hexo以及部署在GitHub，下面介绍详细流程。<br>
-（PS：本博客就是使用Hexo+GitHub的方法搭建的）</h2>
-<!--more-->
-<h1 id="一准备工作">一：准备工作</h1>
+        <summary type="html"><![CDATA[<h1 id="一准备工作">一：准备工作</h1>
 <h2 id="1-下载nodejs并进行安装详见注意事项">1、下载<a href="https://nodejs.org/en/">Node.js</a>，并进行安装（详见注意事项）</h2>
 <blockquote>
 <p>1.双击打开安装包<br>
@@ -36,6 +26,18 @@
 <blockquote>
 <p>依旧按照上述步骤进行安装</p>
 </blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="一准备工作">一：准备工作</h1>
+<h2 id="1-下载nodejs并进行安装详见注意事项">1、下载<a href="https://nodejs.org/en/">Node.js</a>，并进行安装（详见注意事项）</h2>
+<blockquote>
+<p>1.双击打开安装包<br>
+2.疯狂点击下一步进行安装</p>
+</blockquote>
+<h2 id="2-下载git并进行安装">2、下载<a href="https://git-scm.com/">Git</a>，并进行安装</h2>
+<blockquote>
+<p>依旧按照上述步骤进行安装</p>
+</blockquote>
+<!-- more -->
 <h1 id="二-启用github-pages">二、启用Github Pages</h1>
 <h2 id="申请github账号">申请<a href="https://www.github.com">github</a>账号</h2>
 <p>这里xxx填写你的github账户名称。如图：<br>
