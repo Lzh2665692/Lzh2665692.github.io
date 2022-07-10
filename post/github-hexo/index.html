@@ -84,7 +84,7 @@
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1657421633830"
+            <form id="gridea-search-form" style="position: relative" data-update="1657422583795"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -140,7 +140,7 @@
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1657421633830"
+            <form id="gridea-search-form" style="position: relative" data-update="1657422583795"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -167,7 +167,7 @@
               <h1>Github Pages+Hexo 搭建静态博客</h1>
               <span class="meta">
                 Posted on
-                2022-07-10-0，5 min read
+                2022-07-10-0，4 min read
               </span>
             </div>
           
@@ -213,15 +213,17 @@
 <p>输出了版本号，那么证明配置成功<br>
 如果没有版本号，请重新安装node.js，检查是否勾选Add to Path，或者手动为node.js添加环境变量</p>
 </blockquote>
-<p>(<code>) node -v npm -v (</code>)</p>
+<pre><code>node -v
+npm -v
+</code></pre>
 <ul>
-<li>
-<p>安装hexo和hexo服务器模块<br>
-(<code>) npm install hexo-cli -g npm install hexo-server --save (</code>)</p>
-</li>
-<li>
-<p>生成博客文件夹</p>
-</li>
+<li>安装hexo和hexo服务器模块</li>
+</ul>
+<pre><code>npm install hexo-cli -g
+npm install hexo-server --save
+</code></pre>
+<ul>
+<li>生成博客文件夹</li>
 </ul>
 <blockquote>
 <p>直接在自己心仪的路径上右键生成文件夹，名称随意<br>
@@ -236,10 +238,15 @@
 <p>执行<code>hexo init</code>命令，进行博客初始化</p>
 </li>
 <li>
-<p>测试hexo是否安装成功：<br>
-(<code>) hexo new test hexo clean hexo s hexo g hexo d (</code>)</p>
+<p>测试hexo是否安装成功：</p>
 </li>
 </ul>
+<pre><code>hexo new test
+hexo clean
+hexo s
+hexo g
+hexo d
+</code></pre>
 <blockquote>
 <p>其中hexo new test表示新建一篇名为test的博文，hexo g表示生成，是hexo generate的简写，hexo s在本地运行hexo服务器，是hexo server的简写。<br>
 成功后会有如下提示，进入 http://localhost:4000 即可看到刚刚生成的网页<br>
@@ -254,25 +261,26 @@
 <img src="http://www2.zgtech.top/?/images/2022/07/09/7o1Ak1pvEy/Hexo%20%E7%A4%BA%E4%BE%8B.png" alt=" _config.yml 文件" title="_config.yml 文件" loading="lazy"></p>
 </li>
 <li>
-<p>使用 ctrl+f 搜索deploy，并添加以下代码。注意！把xxx改为之前在github配置的名字即可。<br>
-(```)<br>
-deploy:</p>
+<p>使用 ctrl+f 搜索deploy，并添加以下代码。注意！把xxx改为之前在github配置的名字即可。</p>
 </li>
-<li>
-<p>type: git<br>
-repo: https://github.com/xxx/xxx.github.io.git<br>
-branch: master<br>
-(```)</p>
-</li>
+</ul>
+<pre><code>deploy:
+- type: git
+ repo: https://github.com/xxx/xxx.github.io.git
+ branch: master
+</code></pre>
+<ul>
 <li>
 <p>接下来，安装<code>hexo-deployer-git</code>插件<br>
 <code>npm install hexo-deployer-git --save</code></p>
 </li>
 <li>
-<p>最后就可以推送我们的网页到github啦！<br>
-(<code>) hexo g hexo d (</code>)</p>
+<p>最后就可以推送我们的网页到github啦！</p>
 </li>
 </ul>
+<pre><code> hexo g 
+ hexo d
+</code></pre>
 <h1 id="四-完善">四、完善</h1>
 <h2 id="访问网页">访问网页</h2>
 <p>如果之前的步骤都是正确的话，那么恭喜你！你已经可以访问你的网页了！</p>
@@ -287,7 +295,7 @@ branch: master<br>
 <ul>
 <li>
 <p>登录你的Cloudflare后台，点击<code>DNS</code>.添加一条CNAME记录，如图：<br>
-![DNS解析](http://www2.zgtech.top/?/images/2022/07/09/eZjlLhU2Fm/DNS%E8%A7%A3%E6%9E%90.png “DNS解析”)</p>
+<img src="http://www2.zgtech.top/?/images/2022/07/09/eZjlLhU2Fm/DNS%E8%A7%A3%E6%9E%90.png" alt="DNS解析" loading="lazy"></p>
 </li>
 <li>
 <p>其中CNAME的值就填写你的github page的值（也就是上文你注册过的仓库的名字），<br>
@@ -295,16 +303,18 @@ branch: master<br>
 </li>
 <li>
 <p>最后一步，在你本地 /source 文件夹下添加一个名为CNAME的文件（注意，此文件没有后缀），在文件中里面写上你的域名即可。<br>
-![CNAME文件填写](http://www2.zgtech.top/?/images/2022/07/09/INCvyI6930/CNAME%E6%96%87%E4%BB%B6%E5%A1%AB%E5%86%99.png “CNAME文件填写”)</p>
+<img src="http://www2.zgtech.top/?/images/2022/07/09/INCvyI6930/CNAME%E6%96%87%E4%BB%B6%E5%A1%AB%E5%86%99.png" alt="CNAME文件填写" loading="lazy"></p>
 </li>
 <li>
-<p>再次执行deploy<br>
-(<code>) hexo g hexo d (</code>)</p>
+<p>再次执行deploy</p>
 </li>
-<li>
-<p>稍等几分钟，你就可以用自己的域名访问你的网站啦！<br>
-![我的博客](http://www2.zgtech.top/?/images/2022/07/09/GbOwqJJfx6/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2.png “我的博客”)</p>
-</li>
+</ul>
+<pre><code> hexo g 
+ hexo d
+</code></pre>
+<ul>
+<li>稍等几分钟，你就可以用自己的域名访问你的网站啦！<br>
+<img src="http://www2.zgtech.top/?/images/2022/07/09/GbOwqJJfx6/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2.png" alt="我的博客" loading="lazy"></li>
 </ul>
 <h1 id="最后的最后">最后的最后</h1>
 <p>本文介绍了基本的hexo + github page的部署及实现，如果有任何问题，欢迎留言！</p>
