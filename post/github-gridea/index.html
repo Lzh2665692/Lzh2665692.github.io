@@ -10,14 +10,14 @@
 <meta name="keywords" content="">
 <meta name="description" content="欢迎访问[子哥の小破站]的个人博客">
 <meta name="author" content="kveln">
-<title>这里是子哥の小破站 | 子哥の小破站</title>
+<title>使用Github Pages和Gridea搭建个人博客 | 子哥の小破站</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="这里是子哥の小破站 | 子哥の小破站 » Feed"
+<link rel="alternate" type="application/rss+xml" title="使用Github Pages和Gridea搭建个人博客 | 子哥の小破站 » Feed"
   href="https://lzh2665692.github.io/atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -30,8 +30,8 @@
 
 <script>hljs.initHighlightingOnLoad();</script>
 
-  <meta property="og:description" content="这里是子哥の小破站" />
-  <meta property="og:url" content="https://lzh2665692.github.io/post/zhe-li-shi-zi-ge-noxiao-po-zhan" />
+  <meta property="og:description" content="使用Github Pages和Gridea搭建个人博客" />
+  <meta property="og:url" content="https://lzh2665692.github.io/post/github-gridea" />
   <meta property="og:locale" content="zh-CN" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="子哥の小破站" />
@@ -164,10 +164,10 @@
               <span class="tags">
                 
               </span>
-              <h1>这里是子哥の小破站</h1>
+              <h1>使用Github Pages和Gridea搭建个人博客</h1>
               <span class="meta">
                 Posted on
-                2022-07-10-0，2 min read
+                2022-07-10-0，4 min read
               </span>
             </div>
           
@@ -182,59 +182,82 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto post-content-container">
           
-          <h1 id="你好鸭我是子哥-~">你好鸭，我是子哥 ~</h1>
-<h2 id="我一个啥也不懂的小白终于花了两天时间搭建了我的个人博客由-hexo-强力驱动使用-ayer-作为主题"><img src="https://raw.githubusercontent.com/lzh2665692/image/master/zige.jpg" alt="blockchain" title="区块链" loading="lazy"><br>
-我，一个啥也不懂的小白，终于花了两天时间，搭建了我的个人博客，由 <strong>Hexo</strong> 强力驱动，使用 <a href="https://github.com/Shen-Yu/hexo-theme-ayer">Ayer</a> 作为主题。</h2>
-<p>下面，我想记录一下我的折腾历程~</p>
+          <p>之前我写过一个关于如何使用Hexo博客系统搭建静态博客的博文：<a href="https://www.zigecn.eu.org/9b2b00ac.html">博客原文</a></p>
+<p>有同学跟我说像Hexo这样的静态博客使用不方便，因为需要熟悉Git命令，对非计算机专业同学来说很不友好，增加了其学习成本。<br>
+不过我后来又发现了一个超级棒的静态博客写作客户端——Gridea。即使是非计算机同学，也能愉快地构建并管理博客。</p>
+<p>本文，我就来教大家如何来使用Github Pages和Gridea来搭建个人博客~</p>
+<h1 id="关于github-pages">关于Github Pages</h1>
+<p>官方文档：</p>
+<blockquote>
+<p>GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓库获取 HTML、CSS 和 JavaScript 文件，（可选）通过构建过程运行文件，然后发布网站。</p>
+</blockquote>
 <!--more-->
-<h1 id="起因">起因</h1>
-<p>其实我早就有建站的想法了，但是我清楚地认识到一个事实，那就是<strong>我只会用Wordpress</strong>。<br>
-举个例子：我们班上有个技术大佬——段某（我这次构建博客也找他交流过技术），在听说我不会 HTML 之后，是这样说的：</p>
+<p>emmm，总之，GitHub Pages会发布您推送到代码仓库的任何静态文件，你可以创建自己的静态文件或使用静态站点生成器（如Hexo）为你构建站点，然后就可以使用【用户名】.github.io域名访问你的博客网站了。<br>
+对了，是免费的哦~</p>
+<h1 id="关于gridea">关于Gridea</h1>
+<p>官方文档：</p>
 <blockquote>
-<p>html，这东西狗都会</p>
+<p>Gridea 是一个静态博客写作客户端，帮助你更容易地构建并管理博客或任何静态站点。</p>
 </blockquote>
-<h2 id="好家伙合着我应该是还没出生">好家伙，合着我应该是<strong>还没出生</strong>？！</h2>
-<p>于对我技术能力的自知之明，因此建站这事儿我都准备放在高中再研究了。<br>
-后来有天，段某有了一个 Hexo 博客：https://testgifts.tech/<br>
-很快啊，我啪的一下就点进去了，看上去很漂亮~<br>
-<img src="https://i.loli.net/2021/07/18/O6ugHvdFcoNwDaT.png" alt="段某的博客" title="段某的博客" loading="lazy"></p>
+<p><a href="https://gridea.dev/">Gridea</a>的方便就在于可以使用客户端直接编写代码，然后只要点击按钮就能发布，非常人性化。重要的是，其提供了Windows、Mac OS和Linux三种操作系统的客户端。Gridea的界面是这样的：<br>
+<img src="https://pic3.zhimg.com/80/v2-700a119278166a70b2d352abe7c70d9e_720w.jpg" alt="Gridea" title="Gridea" loading="lazy"><br>
+怎么样？是不是非常小清新？是不是迫不及待地想要开始了？！</p>
+<h1 id="开始部署">开始部署</h1>
+<h2 id="1注册github账号">1.注册Github账号</h2>
+<p>先去全球最大的同性恋交流平台——<a href="https://www.github.com/">Github</a>上注册一个账号，登录。</p>
+<h2 id="2创建仓库token">2.创建仓库token</h2>
+<p>登录后，先进入<a href="https://github.com/settings/tokens/new">创建token</a>的页面，然后填写Note（相当于是个提示吧，因为你可能有多个token，便于区分用途），勾上repo即可，往下拉点Generate token。<br>
+<img src="https://pic2.zhimg.com/80/v2-fa7f773e1925f1289bea9d53cc7aa20d_720w.jpg" alt="创建仓库token" title="创建仓库token" loading="lazy"><br>
+然后点这个图标先复制，先保存起来吧，不然你下次再点开就看不到了，得重新生成<br>
+<img src="https://pic3.zhimg.com/80/v2-8ea52e82214c58feed2958471add7c56_720w.jpg" alt="复制仓库token" title="复制仓库token" loading="lazy"></p>
+<h2 id="3-创建公共仓库">3 创建公共仓库</h2>
+<p>点击右上角头像左边的+号，然后选择<code>New repository</code>。<br>
+<img src="https://pic1.zhimg.com/80/v2-c28e327d193e1d1cfe071519fcbf50c8_720w.jpg" alt="创建公共仓库" title="创建公共仓库" loading="lazy"></p>
+<p>填写好信息，点下面的<code>Create repository</code>。</p>
 <blockquote>
-<p>截图上是他已经切换到 Typecho 的网页。<br>
-所以呢，我萌生了做个博客的想法。但也只是“想法”而已。至少在我的固有思维中，建一个个人博客，是一件很麻烦的事情。<br>
-不过这两天我放假了。尽管高二升高三的暑假很短，但我想趁这段时间试试。一试才知道，搭建个 Hexo 博客<strong>非常简单</strong>。</p>
+<p>注意：Repository name填【你的用户名】./github.io，Description可选填。<br>
+<img src="https://pic3.zhimg.com/80/v2-98e889c5e83fdf57878aa8b4177bee42_720w.jpg" alt="创建公共仓库" title="创建公共仓库" loading="lazy"><br>
+创建成功后，就是只有一个只有README.md的仓库，这时你就可以在浏览器访问【你的用户名】.github.io，可以看到内容，就可以了。</p>
 </blockquote>
-<h1 id="尾声">尾声</h1>
-<p>这个暑假我会更新各种技巧，敬请期待。</p>
+<h1 id="运行gridea">运行Gridea</h1>
+<p>去<a href="https://gridea.dev/">Gridea官网</a>下载你操作系统对应的安装包，安装，运行。第一次使用要进行配置，点击<code>远程</code>进行配置。<br>
+<img src="https://pic4.zhimg.com/80/v2-da2e52949c2d435919ead1bb8dde4c03_720w.jpg" alt="Gridea配置" title="Gridea配置" loading="lazy"></p>
+<blockquote>
+<p>平台要选<code>Github Pages</code>，域名和仓库名称填Github的仓库名，分支填<code>main</code>（原先的<code>master</code>有争议，现在已全面改为<code>main</code>），令牌就是刚刚要你复制的token。另外你要绑定域名的话，CNAME就填你的域名。<br>
+如果你不会自定义域名的话，请参考这篇博客：<a href="https://www.zigecn.eu.org/9b2b00ac.html">使用Hexo+Github搭建博客，并自定义域名</a></p>
+</blockquote>
+<p>填写完成后，点<code>保存</code>，然后检测一下<code>远程连接</code>，没问题的话就点左下角的<code>同步</code>。<br>
+这样你就可以访问<code>xxx.github.io</code>来打开你的博客网站了，如果你设置了CNAME，就是访问你的域名。文章的管理就可以直接在这个客户端上操作，同时也可以选择你喜欢的主题，自己多去研究研究吧，哈哈。另外，附上一些答疑。</p>
+<p>大家可以看到，我写的这个教程主要是发的截图，并没有写一行代码，这就是使用Gridea客户端的好处。</p>
+<p>OK，接下来你就自己去折腾你的博客吧~，有问题敬请评论。</p>
 
           <div class="toc-container"><ul class="markdownIt-TOC">
-<li><a href="#%E4%BD%A0%E5%A5%BD%E9%B8%AD%E6%88%91%E6%98%AF%E5%AD%90%E5%93%A5-~">你好鸭，我是子哥 ~</a>
+<li><a href="#%E5%85%B3%E4%BA%8Egithub-pages">关于Github Pages</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8Egridea">关于Gridea</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2">开始部署</a>
 <ul>
-<li><a href="#%E6%88%91%E4%B8%80%E4%B8%AA%E5%95%A5%E4%B9%9F%E4%B8%8D%E6%87%82%E7%9A%84%E5%B0%8F%E7%99%BD%E7%BB%88%E4%BA%8E%E8%8A%B1%E4%BA%86%E4%B8%A4%E5%A4%A9%E6%97%B6%E9%97%B4%E6%90%AD%E5%BB%BA%E4%BA%86%E6%88%91%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%94%B1-hexo-%E5%BC%BA%E5%8A%9B%E9%A9%B1%E5%8A%A8%E4%BD%BF%E7%94%A8-ayer-%E4%BD%9C%E4%B8%BA%E4%B8%BB%E9%A2%98">!blockchain<br>
-我，一个啥也不懂的小白，终于花了两天时间，搭建了我的个人博客，由 <strong>Hexo</strong> 强力驱动，使用 Ayer 作为主题。</a></li>
+<li><a href="#1%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E5%8F%B7">1.注册Github账号</a></li>
+<li><a href="#2%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93token">2.创建仓库token</a></li>
+<li><a href="#3-%E5%88%9B%E5%BB%BA%E5%85%AC%E5%85%B1%E4%BB%93%E5%BA%93">3 创建公共仓库</a></li>
 </ul>
 </li>
-<li><a href="#%E8%B5%B7%E5%9B%A0">起因</a>
-<ul>
-<li><a href="#%E5%A5%BD%E5%AE%B6%E4%BC%99%E5%90%88%E7%9D%80%E6%88%91%E5%BA%94%E8%AF%A5%E6%98%AF%E8%BF%98%E6%B2%A1%E5%87%BA%E7%94%9F">好家伙，合着我应该是<strong>还没出生</strong>？！</a></li>
-</ul>
-</li>
-<li><a href="#%E5%B0%BE%E5%A3%B0">尾声</a></li>
+<li><a href="#%E8%BF%90%E8%A1%8Cgridea">运行Gridea</a></li>
 </ul>
 </div>
           
           <hr />
           <p class="next-post">下一篇：
-            <a href="https://lzh2665692.github.io/post/ssl-zheng-shu-wei-shi-me-jie-ge-chai-ju-na-me-da-na-kuan-ssl-zheng-shu-de-xing-jie-bi-gao">
+            <a href="https://lzh2665692.github.io/post/github-hexo">
               <span class="post-title">
-                SSL证书为什么价格差距那么大？哪款SSL证书的性价比高?&rarr;
+                Github Pages+Hexo 搭建静态博客&rarr;
               </span>
             </a>
           </p>
           
           <div class="comment" style="text-align: center;">
             
-            <span id="/post/zhe-li-shi-zi-ge-noxiao-po-zhan/" class="leancloud_visitors"
-              data-flag-title="这里是子哥の小破站">
+            <span id="/post/github-gridea/" class="leancloud_visitors"
+              data-flag-title="使用Github Pages和Gridea搭建个人博客">
               <em class="post-meta-item-text">阅读量 </em>
               <i class="leancloud-visitors-count">loading...</i>
             </span>
