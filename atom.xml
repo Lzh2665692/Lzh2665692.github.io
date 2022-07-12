@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lzh2665692.github.io</id>
     <title>子哥の小破站</title>
-    <updated>2022-07-12T08:53:15.187Z</updated>
+    <updated>2022-07-12T10:04:17.853Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lzh2665692.github.io"/>
     <link rel="self" href="https://lzh2665692.github.io/atom.xml"/>
@@ -348,8 +348,8 @@ hexo d
     </entry>
     <entry>
         <title type="html"><![CDATA[SSL证书为什么价格差距那么大？哪款SSL证书的性价比高?]]></title>
-        <id>https://lzh2665692.github.io/post/ssl-zheng-shu-wei-shi-me-jie-ge-chai-ju-na-me-da-na-kuan-ssl-zheng-shu-de-xing-jie-bi-gao</id>
-        <link href="https://lzh2665692.github.io/post/ssl-zheng-shu-wei-shi-me-jie-ge-chai-ju-na-me-da-na-kuan-ssl-zheng-shu-de-xing-jie-bi-gao">
+        <id>https://lzh2665692.github.io/post/ssl</id>
+        <link href="https://lzh2665692.github.io/post/ssl">
         </link>
         <updated>2022-07-10T01:51:36.000Z</updated>
         <summary type="html"><![CDATA[<p><a href="https://baike.baidu.com/item/SSL%E8%AF%81%E4%B9%A6/5201468">SSL证书</a>市场品牌和种类众多，用户在选择证书的时候，也能随心所欲的购买到心仪的证书品牌类型。<br>
@@ -435,8 +435,8 @@ OV和EV证书验证流程则是相对复杂些，相较于DV证书，增加了�
     </entry>
     <entry>
         <title type="html"><![CDATA[Office 365 E5 账号申请及永久续期教程]]></title>
-        <id>https://lzh2665692.github.io/post/office-365-e5-zhang-hao-shen-qing-ji-yong-jiu-xu-qi-jiao-cheng</id>
-        <link href="https://lzh2665692.github.io/post/office-365-e5-zhang-hao-shen-qing-ji-yong-jiu-xu-qi-jiao-cheng">
+        <id>https://lzh2665692.github.io/post/office</id>
+        <link href="https://lzh2665692.github.io/post/office">
         </link>
         <updated>2022-07-09T08:36:12.000Z</updated>
         <summary type="html"><![CDATA[<blockquote>
@@ -483,8 +483,8 @@ OV和EV证书验证流程则是相对复杂些，相较于DV证书，增加了�
     </entry>
     <entry>
         <title type="html"><![CDATA[免费申请EU.org顶级域名]]></title>
-        <id>https://lzh2665692.github.io/post/mian-fei-shen-qing-euorg-ding-ji-yu-ming</id>
-        <link href="https://lzh2665692.github.io/post/mian-fei-shen-qing-euorg-ding-ji-yu-ming">
+        <id>https://lzh2665692.github.io/post/free domin</id>
+        <link href="https://lzh2665692.github.io/post/free domin">
         </link>
         <updated>2022-07-09T08:34:56.000Z</updated>
         <summary type="html"><![CDATA[<h1 id="介绍">介绍</h1>
@@ -520,8 +520,8 @@ eu.org是欧盟组织下面的域名，EU代表欧盟，Paul Mockapetris在1996�
     </entry>
     <entry>
         <title type="html"><![CDATA[Gridea 上手教程——小白也可以用的 GitHub Pages 搭建工具]]></title>
-        <id>https://lzh2665692.github.io/post/gridea-shang-shou-jiao-cheng-xiao-bai-ye-ke-yi-yong-de-github-pages-da-jian-gong-ju</id>
-        <link href="https://lzh2665692.github.io/post/gridea-shang-shou-jiao-cheng-xiao-bai-ye-ke-yi-yong-de-github-pages-da-jian-gong-ju">
+        <id>https://lzh2665692.github.io/post/gridea</id>
+        <link href="https://lzh2665692.github.io/post/gridea">
         </link>
         <updated>2022-04-09T13:29:47.000Z</updated>
         <content type="html"><![CDATA[<p>最近为了分享自己的学习心得，开始利用 GitHub Pages 搭建个人博客。但是水平实在太 ，所以没有选择主流的hexo，而是使用Gridea。初始配置简单，后续维护更是简单。对于我这种又懒又 的人来说再合适不过了。今天就总结出文章分享给大家。</p>
