@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lzh2665692.github.io</id>
     <title>子哥の小破站</title>
-    <updated>2022-07-12T10:04:37.205Z</updated>
+    <updated>2022-07-12T12:18:25.305Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lzh2665692.github.io"/>
     <link rel="self" href="https://lzh2665692.github.io/atom.xml"/>
@@ -10,6 +10,206 @@
     <logo>https://lzh2665692.github.io/images/avatar.png</logo>
     <icon>https://lzh2665692.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, 子哥の小破站</rights>
+    <entry>
+        <title type="html"><![CDATA[大陆轻松访问TikTok镜像站]]></title>
+        <id>https://lzh2665692.github.io/post/tiktok</id>
+        <link href="https://lzh2665692.github.io/post/tiktok">
+        </link>
+        <updated>2022-07-12T12:16:33.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="使用说明">使用说明</h1>
+<p>本项目仍然是使用全球最大的CDN服务商——CloudFlare提供的<code>Workers</code>。</p>
+<p>下面我将告诉你们自己搭建Tiktok镜像站点的方法，以解决在天朝无法访问Tiktok的问题。</p>
+<h1 id="开启workers">开启workers</h1>
+<p>在控制面板主页左侧可以找到<code>workers</code>。<br>
+可以将<code>workers</code>理解为cloudflare的一款proxy服务，这个服务的一大优点就是自带CDN。按照官方的说法：</p>
+<blockquote>
+<p>构建无服务器应用程序并在全球范围内即时部署，从而获得卓越的性能、可靠性和规模性。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="使用说明">使用说明</h1>
+<p>本项目仍然是使用全球最大的CDN服务商——CloudFlare提供的<code>Workers</code>。</p>
+<p>下面我将告诉你们自己搭建Tiktok镜像站点的方法，以解决在天朝无法访问Tiktok的问题。</p>
+<h1 id="开启workers">开启workers</h1>
+<p>在控制面板主页左侧可以找到<code>workers</code>。<br>
+可以将<code>workers</code>理解为cloudflare的一款proxy服务，这个服务的一大优点就是自带CDN。按照官方的说法：</p>
+<blockquote>
+<p>构建无服务器应用程序并在全球范围内即时部署，从而获得卓越的性能、可靠性和规模性。</p>
+</blockquote>
+<!--more-->
+<figure data-type="image" tabindex="1"><img src="http://zigeltd.eu.org/?/images/2022/07/12/hFSjhW5lQ5/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-07-12%20191038.png" alt="找到Workers" loading="lazy"></figure>
+<p>如图所示，点击<code>创建服务</code>，右侧显示每天的额度，如果只是搭建个人服务这些额度绰绰有余了。下方会显示所有已经搭建的服务。<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/12/aPRxACYwDc/v2-0f300582f5820076cfad4547caca1d87_720w.jpg" alt="创建服务" loading="lazy"></p>
+<p>进入<code>创建服务</code>页面后，我们要稍微配置一下这个服务名称，将他改为自己心仪的名称，<s>因为以后我们要用他访问镜像站</s>（2022年后workers.dev就被墙了）<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/12/IuoDDragZw/v2-f5bdf69a578ca901215b48d881e31523_r.jpg" alt="创建函数" loading="lazy"></p>
+<p>这样我们的服务就搭建好了。但是我们还需要修改代码。转到<code>控制界面</code>，可以找到右下角有一个<code>快速编辑</code>的按钮。<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/12/iOQXTHdYGG/v2-5908f6e3bd67091d62fb454d6b16f21e_720w.jpg" alt="控制界面" loading="lazy"></p>
+<p>左边<code>修改代码</code>，下方<code>部署</code>，右侧可以选择<code>预览窗口</code>，以及打开链接。</p>
+<blockquote>
+<p>一般我们就打开这个页面，把下方的代码复制进去，点击<code>保存部署</code>，然后输入链接就可以直接访问Tiktok镜像站了。<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/12/3GZXvdnoYw/v2-86fe48f5e898614c4d227ea5bd4b896f_720w.jpg" alt="部署代码" loading="lazy"></p>
+</blockquote>
+<h1 id="代码内容">代码内容</h1>
+<p>原来代码设置的是Google的镜像站，我这里改成Tiktok了。我们直接复制贴到<code>workers</code>里面即可。</p>
+<pre><code>// 你要镜像的网站.
+const upstream = 'www.tiktok.com'
+
+// 镜像网站的目录，比如你想镜像某个网站的二级目录则填写二级目录的目录名，镜像 google 用不到，默认即可.
+const upstream_path = '/'
+
+// 镜像站是否有手机访问专用网址，没有则填一样的.
+const upstream_mobile = 'www.tiktok.com'
+
+// 屏蔽国家和地区.
+const blocked_region = ['KP', 'SY', 'PK', 'CU']
+
+// 屏蔽 IP 地址.
+const blocked_ip_address = ['0.0.0.0', '127.0.0.1']
+
+// 镜像站是否开启 HTTPS.
+const https = true
+
+// 文本替换.
+const replace_dict = {
+    '$upstream': '$custom_domain',
+    '//tiktok.com': ''
+}
+
+// 以下保持默认，不要动
+addEventListener('fetch', event =&gt; {
+    event.respondWith(fetchAndApply(event.request));
+})
+
+async function fetchAndApply(request) {
+
+    const region = request.headers.get('cf-ipcountry').toUpperCase();
+    const ip_address = request.headers.get('cf-connecting-ip');
+    const user_agent = request.headers.get('user-agent');
+
+    let response = null;
+    let url = new URL(request.url);
+    let url_hostname = url.hostname;
+
+    if (https == true) {
+        url.protocol = 'https:';
+    } else {
+        url.protocol = 'http:';
+    }
+
+    if (await device_status(user_agent)) {
+        var upstream_domain = upstream;
+    } else {
+        var upstream_domain = upstream_mobile;
+    }
+
+    url.host = upstream_domain;
+    if (url.pathname == '/') {
+        url.pathname = upstream_path;
+    } else {
+        url.pathname = upstream_path + url.pathname;
+    }
+
+    if (blocked_region.includes(region)) {
+        response = new Response('Access denied: WorkersProxy is not available in your region yet.', {
+            status: 403
+        });
+    } else if (blocked_ip_address.includes(ip_address)) {
+        response = new Response('Access denied: Your IP address is blocked by WorkersProxy.', {
+            status: 403
+        });
+    } else {
+        let method = request.method;
+        let request_headers = request.headers;
+        let new_request_headers = new Headers(request_headers);
+
+        new_request_headers.set('Host', url.hostname);
+        new_request_headers.set('Referer', url.hostname);
+
+        let original_response = await fetch(url.href, {
+            method: method,
+            headers: new_request_headers
+        })
+
+        let original_response_clone = original_response.clone();
+        let original_text = null;
+        let response_headers = original_response.headers;
+        let new_response_headers = new Headers(response_headers);
+        let status = original_response.status;
+
+        new_response_headers.set('access-control-allow-origin', '*');
+        new_response_headers.set('access-control-allow-credentials', true);
+        new_response_headers.delete('content-security-policy');
+        new_response_headers.delete('content-security-policy-report-only');
+        new_response_headers.delete('clear-site-data');
+
+        const content_type = new_response_headers.get('content-type');
+        if (content_type.includes('text/html') &amp;&amp; content_type.includes('UTF-8')) {
+            original_text = await replace_response_text(original_response_clone, upstream_domain, url_hostname);
+        } else {
+            original_text = original_response_clone.body
+        }
+
+        response = new Response(original_text, {
+            status,
+            headers: new_response_headers
+        })
+    }
+    return response;
+}
+
+async function replace_response_text(response, upstream_domain, host_name) {
+    let text = await response.text()
+
+    var i, j;
+    for (i in replace_dict) {
+        j = replace_dict[i]
+        if (i == '$upstream') {
+            i = upstream_domain
+        } else if (i == '$custom_domain') {
+            i = host_name
+        }
+
+        if (j == '$upstream') {
+            j = upstream_domain
+        } else if (j == '$custom_domain') {
+            j = host_name
+        }
+
+        let re = new RegExp(i, 'g')
+        text = text.replace(re, j);
+    }
+    return text;
+}
+
+
+async function device_status(user_agent_info) {
+    var agents = [&quot;Android&quot;, &quot;iPhone&quot;, &quot;SymbianOS&quot;, &quot;Windows Phone&quot;, &quot;iPad&quot;, &quot;iPod&quot;];
+    var flag = true;
+    for (var v = 0; v &lt; agents.length; v++) {
+        if (user_agent_info.indexOf(agents[v]) &gt; 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+</code></pre>
+<h1 id="自定义域名">自定义域名</h1>
+<h2 id="托管域名到cloudflare">托管域名到Cloudflare</h2>
+<p>就是把自己的域名转移到CloudFlare这个很简单，到Cloudflare 主页点击<code>添加站点</code>即可托管。</p>
+<h2 id="新增dns解析">新增DNS解析</h2>
+<p>进入自己的域名后转到<code>DNS</code>界面，添加一条‘AAAA“DNS解析，IPv6为<code>100::</code>,最重要的是打开小黄云（即打开Cloudflare代理）<br>
+![DNS解析]（http://zigeltd.eu.org/?/images/2022/07/12/5L8apau8GB/00c4d243e79aa4334a873dafe37c9396.png)</p>
+<h2 id="关联域名">关联域名</h2>
+<p>**进入你的域名，不是你的首页！**进入Workers，添加路由</p>
+<h1 id="最终效果">最终效果</h1>
+<p>现在已经无法打开Google了，显示错误（被撸爆也是很正常的吧），Github也被撸爆了。目前Tiktok还可以正常使用<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/12/Fg16fPa3Ck/v2-4bcd1142c33ae15a7fbde408f73951e1_720w.jpg" alt="Google显示错误" loading="lazy"><br>
+但是Tiktok还能正常访问：<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/12/7x860qYeD2/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-07-12%20195612.png" alt="Tiktok" loading="lazy"></p>
+<p>最后再附上我的Tiktok镜像站地址：<br>
+[Tiktok- Make You Day](https://tik.zgtech.top/）</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Github 访问慢？加速访问 Github 的两种方案，简单粗暴]]></title>
         <id>https://lzh2665692.github.io/post/github cdn</id>

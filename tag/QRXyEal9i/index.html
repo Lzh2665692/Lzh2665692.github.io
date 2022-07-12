@@ -10,14 +10,14 @@
 <meta name="keywords" content="">
 <meta name="description" content="欢迎访问[子哥の小破站]的个人博客">
 <meta name="author" content="kveln">
-<title>Github | 子哥の小破站</title>
+<title>镜像 | 子哥の小破站</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="Github | 子哥の小破站 » Feed"
+<link rel="alternate" type="application/rss+xml" title="镜像 | 子哥の小破站 » Feed"
   href="https://lzh2665692.github.io/atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -98,7 +98,7 @@
           
             <!-- 其他页面（archives、tags、about...）Header -->
             <div class="sub-site-heading">
-              <h1 class="tag-tl">#Github</h1>
+              <h1 class="tag-tl">#镜像</h1>
             </div>
           
         
@@ -116,11 +116,9 @@
         <div class="title-floor">
           <div class="post-title-container">
             
-            <span class="sticky-top-flag gt-bg-accent-color-first">置顶</span>
-            
-            <a href="https://lzh2665692.github.io/post/github cdn">
+            <a href="https://lzh2665692.github.io/post/tiktok">
               <h2 class="post-title">
-                Github 访问慢？加速访问 Github 的两种方案，简单粗暴
+                大陆轻松访问TikTok镜像站
               </h2>
             </a>
           </div>
@@ -129,12 +127,15 @@
         <div class="post-row-first-floor">
           <div class="post-preview">
             <h3 class="post-subtitle">
-              <p>Github 有很多优质资源，甚至有些开源免费的资源，比付费的还好用。我不是经常会贴一些 Github 的链接，但贴的链接，有些人反应打不开。</p>
-<p>今天我就分享几个常用的打开Github的方法：</p>
-<h1 id="修改本机的host文件">修改本机的host文件</h1>
-<h2 id="原理">原理</h2>
-<p>像 Github 这种国际性大公司，肯定全球各个国家都部署了服务，虽然全球不同国家的用户都是访问同一个域名 ，比如，日本和美国的网友都访问 github.com，但背后访问的服务器不是同一个，为了提高访问速度，肯定优先访问本地服务器的服务。日本访问日本节点的服务器，美国访问美国节点的服务器。</p>
-<p>本来访问Github就如同其他网页一样正常，但是Github在中国没有服务器，所以中国网友访问 github.com 就会解析到国外。由于众所周知的原因，GFW就把 github.com 给墙了</p>
+              <h1 id="使用说明">使用说明</h1>
+<p>本项目仍然是使用全球最大的CDN服务商——CloudFlare提供的<code>Workers</code>。</p>
+<p>下面我将告诉你们自己搭建Tiktok镜像站点的方法，以解决在天朝无法访问Tiktok的问题。</p>
+<h1 id="开启workers">开启workers</h1>
+<p>在控制面板主页左侧可以找到<code>workers</code>。<br>
+可以将<code>workers</code>理解为cloudflare的一款proxy服务，这个服务的一大优点就是自带CDN。按照官方的说法：</p>
+<blockquote>
+<p>构建无服务器应用程序并在全球范围内即时部署，从而获得卓越的性能、可靠性和规模性。</p>
+</blockquote>
 
             </h3>
             <p class="post-meta">
@@ -150,105 +151,16 @@
           <hr>
           <div class="clearfix"></div>
           
-          <a href="https://lzh2665692.github.io/tag/github" class="post-tag">
-            Github
+          <a href="https://lzh2665692.github.io/tag/vufnePzwW" class="post-tag">
+            Tiktok
           </a>
           
-        </div>
-      </div>
-      </>
-      
-      <!-- 每行的总容器 -->
-      <div class="post-row-container">
-        <!-- 第0层；标题 -->
-        <div class="title-floor">
-          <div class="post-title-container">
-            
-            <a href="https://lzh2665692.github.io/post/github-gridea">
-              <h2 class="post-title">
-                使用Github Pages和Gridea搭建个人博客
-              </h2>
-            </a>
-          </div>
-        </div>
-        <!-- 第一层：包含文章描述、时间信息、封面图 -->
-        <div class="post-row-first-floor">
-          <div class="post-preview">
-            <h3 class="post-subtitle">
-              <p>之前我写过一个关于如何使用Hexo博客系统搭建静态博客的博文：<a href="https://www.zigecn.eu.org/9b2b00ac.html">博客原文</a></p>
-<p>有同学跟我说像Hexo这样的静态博客使用不方便，因为需要熟悉Git命令，对非计算机专业同学来说很不友好，增加了其学习成本。<br>
-不过我后来又发现了一个超级棒的静态博客写作客户端——Gridea。即使是非计算机同学，也能愉快地构建并管理博客。</p>
-<p>本文，我就来教大家如何来使用Github Pages和Gridea来搭建个人博客~</p>
-<h1 id="关于github-pages">关于Github Pages</h1>
-<p>官方文档：</p>
-<blockquote>
-<p>GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓库获取 HTML、CSS 和 JavaScript 文件，（可选）通过构建过程运行文件，然后发布网站。</p>
-</blockquote>
-
-            </h3>
-            <p class="post-meta">
-              <span class="time">2022-07-10-0</span>
-              <span>,</span>
-              <span class="post-stats">4 min read</span>
-            </p>
-          </div>
-          
-        </div>
-        <!-- 第二层：下划线、占位标签、tags -->
-        <div class="post-row-sec-floor">
-          <hr>
-          <div class="clearfix"></div>
-          
-          <a href="https://lzh2665692.github.io/tag/github" class="post-tag">
-            Github
+          <a href="https://lzh2665692.github.io/tag/QRXyEal9i" class="post-tag">
+            镜像
           </a>
           
-          <a href="https://lzh2665692.github.io/tag/gridea" class="post-tag">
-            Gridea
-          </a>
-          
-        </div>
-      </div>
-      </>
-      
-      <!-- 每行的总容器 -->
-      <div class="post-row-container">
-        <!-- 第0层；标题 -->
-        <div class="title-floor">
-          <div class="post-title-container">
-            
-            <a href="https://lzh2665692.github.io/post/gridea">
-              <h2 class="post-title">
-                Gridea 上手教程——小白也可以用的 GitHub Pages 搭建工具
-              </h2>
-            </a>
-          </div>
-        </div>
-        <!-- 第一层：包含文章描述、时间信息、封面图 -->
-        <div class="post-row-first-floor">
-          <div class="post-preview">
-            <h3 class="post-subtitle">
-              
-            </h3>
-            <p class="post-meta">
-              <span class="time">2022-04-09-0</span>
-              <span>,</span>
-              <span class="post-stats">2 min read</span>
-            </p>
-          </div>
-          
-        </div>
-        <!-- 第二层：下划线、占位标签、tags -->
-        <div class="post-row-sec-floor">
-          <hr>
-          <div class="clearfix"></div>
-          
-          <a href="https://lzh2665692.github.io/tag/github" class="post-tag">
-            Github
-          </a>
-          
-          <a href="https://lzh2665692.github.io/tag/gridea" class="post-tag">
-            Gridea
+          <a href="https://lzh2665692.github.io/tag/free" class="post-tag">
+            免费
           </a>
           
         </div>
