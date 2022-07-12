@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lzh2665692.github.io</id>
     <title>子哥の小破站</title>
-    <updated>2022-07-10T09:04:00.723Z</updated>
+    <updated>2022-07-12T03:50:56.524Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lzh2665692.github.io"/>
     <link rel="self" href="https://lzh2665692.github.io/atom.xml"/>
@@ -10,6 +10,88 @@
     <logo>https://lzh2665692.github.io/images/avatar.png</logo>
     <icon>https://lzh2665692.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, 子哥の小破站</rights>
+    <entry>
+        <title type="html"><![CDATA[Github 访问慢？加速访问 Github 的两种方案，简单粗暴]]></title>
+        <id>https://lzh2665692.github.io/post/github-fang-wen-man-jia-su-fang-wen-github-de-liang-chong-fang-an-jian-dan-cu-bao</id>
+        <link href="https://lzh2665692.github.io/post/github-fang-wen-man-jia-su-fang-wen-github-de-liang-chong-fang-an-jian-dan-cu-bao">
+        </link>
+        <updated>2022-07-12T03:50:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>Github 有很多优质资源，甚至有些开源免费的资源，比付费的还好用。我不是经常会贴一些 Github 的链接，但贴的链接，有些人反应打不开。</p>
+<p>今天我就分享几个常用的打开Github的方法：</p>
+<h1 id="修改本机的host文件">修改本机的host文件</h1>
+<h2 id="原理">原理</h2>
+<p>像 Github 这种国际性大公司，肯定全球各个国家都部署了服务，虽然全球不同国家的用户都是访问同一个域名 ，比如，日本和美国的网友都访问 github.com，但背后访问的服务器不是同一个，为了提高访问速度，肯定优先访问本地服务器的服务。日本访问日本节点的服务器，美国访问美国节点的服务器。</p>
+<p>本来访问Github就如同其他网页一样正常，但是Github在中国没有服务器，所以中国网友访问 github.com 就会解析到国外。由于众所周知的原因，GFW就把 github.com 给墙了</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Github 有很多优质资源，甚至有些开源免费的资源，比付费的还好用。我不是经常会贴一些 Github 的链接，但贴的链接，有些人反应打不开。</p>
+<p>今天我就分享几个常用的打开Github的方法：</p>
+<h1 id="修改本机的host文件">修改本机的host文件</h1>
+<h2 id="原理">原理</h2>
+<p>像 Github 这种国际性大公司，肯定全球各个国家都部署了服务，虽然全球不同国家的用户都是访问同一个域名 ，比如，日本和美国的网友都访问 github.com，但背后访问的服务器不是同一个，为了提高访问速度，肯定优先访问本地服务器的服务。日本访问日本节点的服务器，美国访问美国节点的服务器。</p>
+<p>本来访问Github就如同其他网页一样正常，但是Github在中国没有服务器，所以中国网友访问 github.com 就会解析到国外。由于众所周知的原因，GFW就把 github.com 给墙了</p>
+<!--more-->
+<p>这里实现的方式就是利用 DNS解析服务器，这个DNS解析服务器相当一个中间件一样，记录这域名和 IP 的映射关系。</p>
+<p>但除了中国以外的国家还有很多，我们可以挑选一些离我们近的国家，访问 Github 部署在他们国家的服务器，这样就能够正常访问啦~</p>
+<h2 id="开始操作">开始操作</h2>
+<h3 id="找cdn节点">找CDN节点</h3>
+<p>第一步不用我们做了，有网友维护了 Github 全新、优秀的节点。当然，这个作者也将它们开源到 [Github 520]（https://github.com/521xueweihan/GitHub520）。<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/12/DTYttAG8iY/image-20220604204900211.png" alt="Github 520" loading="lazy"></p>
+<h3 id="复制节点内容">复制节点内容</h3>
+<pre><code># GitHub520 Host Start
+140.82.112.25                 alive.github.com
+140.82.112.25                 live.github.com
+185.199.108.154               github.githubassets.com
+140.82.114.21                 central.github.com
+185.199.108.133               desktop.githubusercontent.com
+185.199.108.153               assets-cdn.github.com
+185.199.108.133               camo.githubusercontent.com
+185.199.108.133               github.map.fastly.net
+199.232.69.194                github.global.ssl.fastly.net
+140.82.112.4                  gist.github.com
+185.199.108.153               github.io
+140.82.113.3                  github.com
+192.0.66.2                    github.blog
+140.82.114.5                  api.github.com
+185.199.108.133               raw.githubusercontent.com
+185.199.108.133               user-images.githubusercontent.com
+185.199.108.133               favicons.githubusercontent.com
+185.199.108.133               avatars5.githubusercontent.com
+185.199.108.133               avatars4.githubusercontent.com
+185.199.108.133               avatars3.githubusercontent.com
+185.199.108.133               avatars2.githubusercontent.com
+185.199.108.133               avatars1.githubusercontent.com
+185.199.108.133               avatars0.githubusercontent.com
+185.199.108.133               avatars.githubusercontent.com
+140.82.114.9                  codeload.github.com
+54.231.200.129                github-cloud.s3.amazonaws.com
+52.217.33.196                 github-com.s3.amazonaws.com
+52.216.93.147                 github-production-release-asset-2e65be.s3.amazonaws.com
+52.216.93.147                 github-production-user-asset-6210df.s3.amazonaws.com
+52.217.207.33                 github-production-repository-file-5c1aeb.s3.amazonaws.com
+185.199.108.153               githubstatus.com
+64.71.144.211                 github.community
+23.100.27.125                 github.dev
+140.82.113.21                 collector.github.com
+13.107.42.16                  pipelines.actions.githubusercontent.com
+185.199.108.133               media.githubusercontent.com
+185.199.108.133               cloud.githubusercontent.com
+185.199.108.133               objects.githubusercontent.com
+</code></pre>
+<h3 id="找到并修改电脑上-hosts文件">找到并修改电脑上 hosts文件</h3>
+<p>Windows：<code>C:\Windows\System32\drivers\etc\hosts</code></p>
+<p>Mac：<code>/etc/hosts</code><br>
+接着以<code>管理员身份</code>用<code>文本编辑器</code>打开<code>hosts 文件</code>，并将上面 Github 520 的<code>节点内容</code>都复制粘贴到<code>最后面</code>。</p>
+<h3 id="刷新dns缓存">刷新DNS缓存</h3>
+<p>使用 CMD 打开 DOSS 界面，输入命令：<br>
+Windows：<code>ipconfig /flushdns</code><br>
+Mac os：<code>sudo killall -HUP mDNSResponder</code><br>
+OK，各位可以再打开 <a href="https://www.github.com/">Github</a> 看看，是否可以正常访问Github了</p>
+<h1 id="dev-sidecar">dev-sidecar(）</h1>
+<p>第二种方案更加简单，只要下载软件就行了。这个项目叫 <a href="https://github.com/docmirror/dev-sidecar/releases">开发者边车辅助工具</a>，解决 Github 打不开、用户头像无法加载、releases 无法上传下载、git-clone、git-pull、git-push.git.exe 失败等问题。</p>
+<p>在[下载页面]（https://github.com/docmirror/dev-sidecar/releases)下载对应你操作系统的软件，支持 Mac、Windows、Linux。<br>
+下载解压到本地，双击打开。安装即可</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用Github Pages和Gridea搭建个人博客]]></title>
         <id>https://lzh2665692.github.io/post/github-gridea</id>
