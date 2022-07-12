@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lzh2665692.github.io</id>
     <title>子哥の小破站</title>
-    <updated>2022-07-12T03:50:56.524Z</updated>
+    <updated>2022-07-12T03:53:22.564Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lzh2665692.github.io"/>
     <link rel="self" href="https://lzh2665692.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2022, 子哥の小破站</rights>
     <entry>
         <title type="html"><![CDATA[Github 访问慢？加速访问 Github 的两种方案，简单粗暴]]></title>
-        <id>https://lzh2665692.github.io/post/github-fang-wen-man-jia-su-fang-wen-github-de-liang-chong-fang-an-jian-dan-cu-bao</id>
-        <link href="https://lzh2665692.github.io/post/github-fang-wen-man-jia-su-fang-wen-github-de-liang-chong-fang-an-jian-dan-cu-bao">
+        <id>https://lzh2665692.github.io/post/github cdn</id>
+        <link href="https://lzh2665692.github.io/post/github cdn">
         </link>
         <updated>2022-07-12T03:50:19.000Z</updated>
         <summary type="html"><![CDATA[<p>Github 有很多优质资源，甚至有些开源免费的资源，比付费的还好用。我不是经常会贴一些 Github 的链接，但贴的链接，有些人反应打不开。</p>
