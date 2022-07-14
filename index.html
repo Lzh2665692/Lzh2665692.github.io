@@ -77,7 +77,7 @@
         
         <li class="nav-item">
           <div class="gridea-search-container">
-            <form id="gridea-search-form" style="position: relative" data-update="1657628301920"
+            <form id="gridea-search-form" style="position: relative" data-update="1657769213983"
               action="/search/index.html">
               <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
               <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -152,6 +152,54 @@
           <a href="https://lzh2665692.github.io/tag/github" class="post-tag">
             Github
           </a>
+          
+        </div>
+      </div>
+      </>
+      
+      <!-- 每行的总容器 -->
+      <div class="post-row-container">
+        <!-- 第0层；标题 -->
+        <div class="title-floor">
+          <div class="post-title-container">
+            
+            <a href="https://lzh2665692.github.io/post/wan-mei-jie-jue-github-ge-ren-bo-ke-bu-bei-bai-du-shou-lu-de-wen-ti">
+              <h2 class="post-title">
+                完美解决Github个人博客不被百度收录的问题
+              </h2>
+            </a>
+          </div>
+        </div>
+        <!-- 第一层：包含文章描述、时间信息、封面图 -->
+        <div class="post-row-first-floor">
+          <div class="post-preview">
+            <h3 class="post-subtitle">
+              <h1 id="序言">序言</h1>
+<p>我这个博客本来是挂在 GitHub Pages，但是后来发现Github把百度的爬虫给办了（好像是百度的爬虫爬的太狠，影响Github pages的正常使用），这也就导致了我部署在Github上的个人博客无法被收录。后来Cloudflare Page推出，这个问题也就迎刃而解了。<br>
+为了让广大网友不被此问题侵扰，特写此文。</p>
+<h1 id="cloudflare-pages的优点">Cloudflare Pages的优点</h1>
+<ul>
+<li>CloudFlare Pages 没被墙</li>
+<li>CloudFlare Pages 自选IP后尤其是移动，速度比隔壁 Vercel 还要快不少，不信你可以看我博客的评论区，评论系统就是部署在 Vercel 东京机房的（</li>
+<li>CloudFlare Pages 本身就集成了 CI/CD，而且我个人感觉比 GitHub Action 以及 Travis CI 稳定，也省得折腾，唯一的限制就是每个月免费构建额度是500次，但这也已经很够用了吧（</li>
+<li>CloudFlare Pages 的自动化构建可以从 private repository 拉取源文件，不像 GitHub Pages 必须是 public repo</li>
+<li>支持多个自定义域名</li>
+<li>CloudFlare Pages 没有 ban 掉百度爬虫，百度收录正常</li>
+</ul>
+
+            </h3>
+            <p class="post-meta">
+              <span class="time">2022-07-14-0</span>
+              <span>,</span>
+              <span class="post-stats">3 min read</span>
+            </p>
+          </div>
+          
+        </div>
+        <!-- 第二层：下划线、占位标签、tags -->
+        <div class="post-row-sec-floor">
+          <hr>
+          <div class="clearfix"></div>
           
         </div>
       </div>

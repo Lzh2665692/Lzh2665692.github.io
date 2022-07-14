@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lzh2665692.github.io</id>
     <title>子哥の小破站</title>
-    <updated>2022-07-12T12:18:25.305Z</updated>
+    <updated>2022-07-14T03:27:04.652Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lzh2665692.github.io"/>
     <link rel="self" href="https://lzh2665692.github.io/atom.xml"/>
@@ -10,6 +10,90 @@
     <logo>https://lzh2665692.github.io/images/avatar.png</logo>
     <icon>https://lzh2665692.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, 子哥の小破站</rights>
+    <entry>
+        <title type="html"><![CDATA[完美解决Github个人博客不被百度收录的问题]]></title>
+        <id>https://lzh2665692.github.io/post/wan-mei-jie-jue-github-ge-ren-bo-ke-bu-bei-bai-du-shou-lu-de-wen-ti</id>
+        <link href="https://lzh2665692.github.io/post/wan-mei-jie-jue-github-ge-ren-bo-ke-bu-bei-bai-du-shou-lu-de-wen-ti">
+        </link>
+        <updated>2022-07-14T03:22:07.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="序言">序言</h1>
+<p>我这个博客本来是挂在 GitHub Pages，但是后来发现Github把百度的爬虫给办了（好像是百度的爬虫爬的太狠，影响Github pages的正常使用），这也就导致了我部署在Github上的个人博客无法被收录。后来Cloudflare Page推出，这个问题也就迎刃而解了。<br>
+为了让广大网友不被此问题侵扰，特写此文。</p>
+<h1 id="cloudflare-pages的优点">Cloudflare Pages的优点</h1>
+<ul>
+<li>CloudFlare Pages 没被墙</li>
+<li>CloudFlare Pages 自选IP后尤其是移动，速度比隔壁 Vercel 还要快不少，不信你可以看我博客的评论区，评论系统就是部署在 Vercel 东京机房的（</li>
+<li>CloudFlare Pages 本身就集成了 CI/CD，而且我个人感觉比 GitHub Action 以及 Travis CI 稳定，也省得折腾，唯一的限制就是每个月免费构建额度是500次，但这也已经很够用了吧（</li>
+<li>CloudFlare Pages 的自动化构建可以从 private repository 拉取源文件，不像 GitHub Pages 必须是 public repo</li>
+<li>支持多个自定义域名</li>
+<li>CloudFlare Pages 没有 ban 掉百度爬虫，百度收录正常</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="序言">序言</h1>
+<p>我这个博客本来是挂在 GitHub Pages，但是后来发现Github把百度的爬虫给办了（好像是百度的爬虫爬的太狠，影响Github pages的正常使用），这也就导致了我部署在Github上的个人博客无法被收录。后来Cloudflare Page推出，这个问题也就迎刃而解了。<br>
+为了让广大网友不被此问题侵扰，特写此文。</p>
+<h1 id="cloudflare-pages的优点">Cloudflare Pages的优点</h1>
+<ul>
+<li>CloudFlare Pages 没被墙</li>
+<li>CloudFlare Pages 自选IP后尤其是移动，速度比隔壁 Vercel 还要快不少，不信你可以看我博客的评论区，评论系统就是部署在 Vercel 东京机房的（</li>
+<li>CloudFlare Pages 本身就集成了 CI/CD，而且我个人感觉比 GitHub Action 以及 Travis CI 稳定，也省得折腾，唯一的限制就是每个月免费构建额度是500次，但这也已经很够用了吧（</li>
+<li>CloudFlare Pages 的自动化构建可以从 private repository 拉取源文件，不像 GitHub Pages 必须是 public repo</li>
+<li>支持多个自定义域名</li>
+<li>CloudFlare Pages 没有 ban 掉百度爬虫，百度收录正常</li>
+</ul>
+<!--more-->
+<h1 id="部署">部署</h1>
+<h2 id="序言-2">序言</h2>
+<p>我的博客使用Hexo驱动的，所以在这里就使用Hexo为演示步骤，其他建站系统也大同小异。</p>
+<h2 id="添加站点">添加站点</h2>
+<p>我们首先在 CloudFlare 管理面板导航栏即可找到 Pages 服务 (简体中文为 “网页”)，进入页面后，点击 <code>创建项目</code> 。选择<code>连接到git</code>。<br>
+接着绑定部署着你的博客的Github账号，选择你部署博客的仓库。<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/14/tk5v8KsMA9/gsfn.png" alt="选择仓库" title="选择仓库" loading="lazy"></p>
+<p>点击<code>开始设置</code>，进入<code>设置构建和部署</code>界面。<code>框架预设</code>选择None，<code>构建指令</code>输入<code>exit 0</code>，其他选项保持默认。<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/14/elq4gWFucN/bbn.png" alt="构建和部署" title="构建和部署" loading="lazy"></p>
+<p>接着点击<code>保存并部署</code>，进入<code>部署站点</code>页面，稍等片刻即可部署完成。<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/14/4ulWzCJ17w/nbv.png" alt="成功部署1" title="成功部署1" loading="lazy"><br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/14/r7ZO1vP0Z4/y.png" alt="成功部署2" title="成功部署2" loading="lazy"></p>
+<p>最后使用Cloudflare分配给你的二级域名即可访问你的博客啦~</p>
+<h2 id="绑定自定义域名">绑定自定义域名</h2>
+<p>绑定非 CloudFlare 上购买/解析的自定义域名时需要验证 DNS 记录，CloudFlare Pages 要求 CNAME 记录指向它给你分配的二级域名，但众所周知 CNAME 记录和 MX 记录会有一定冲突，可能导致你的域名邮箱收不到邮件。<br>
+这时我们只要把CNAME记录换为A和AAAA记录即可。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th style="text-align:center">名称</th>
+<th style="text-align:right">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align:center">@</td>
+<td style="text-align:right">1.1. 1.1</td>
+</tr>
+<tr>
+<td>A</td>
+<td style="text-align:center">@</td>
+<td style="text-align:right">1.0. 0.1</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td style="text-align:center">@</td>
+<td style="text-align:right">2606:4700:4700::1111</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td style="text-align:center">@</td>
+<td style="text-align:right">2606:4700:4700::1001</td>
+</tr>
+</tbody>
+</table>
+<h1 id="最后">最后</h1>
+<p>不过有一点需要说明，在解析的时候，建议不要把天朝指向到 IPv6 的 CDN，真的很卡……</p>
+<p>具体国内分运营商解析还需要再配置，网上自选 CloudFlare 工具的轮子很多，网友跑出来的结果也很完整了。没错，使用 CloudFlare Pages 不用 CloudFlare Partner 也能用自选 IP CDN，这也算一个好处吧。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[大陆轻松访问TikTok镜像站]]></title>
         <id>https://lzh2665692.github.io/post/tiktok</id>

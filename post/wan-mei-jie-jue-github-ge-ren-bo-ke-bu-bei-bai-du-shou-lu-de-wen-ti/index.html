@@ -10,14 +10,14 @@
 <meta name="keywords" content="">
 <meta name="description" content="欢迎访问[子哥の小破站]的个人博客">
 <meta name="author" content="kveln">
-<title>使用Github Pages和Gridea搭建个人博客 | 子哥の小破站</title>
+<title>完美解决Github个人博客不被百度收录的问题 | 子哥の小破站</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link
   href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
   rel='stylesheet' type='text/css'>
-<link rel="alternate" type="application/rss+xml" title="使用Github Pages和Gridea搭建个人博客 | 子哥の小破站 » Feed"
+<link rel="alternate" type="application/rss+xml" title="完美解决Github个人博客不被百度收录的问题 | 子哥の小破站 » Feed"
   href="https://lzh2665692.github.io/atom.xml">
 <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
@@ -30,8 +30,8 @@
 
 <script>hljs.initHighlightingOnLoad();</script>
 
-  <meta property="og:description" content="使用Github Pages和Gridea搭建个人博客" />
-  <meta property="og:url" content="https://lzh2665692.github.io/post/github-gridea" />
+  <meta property="og:description" content="完美解决Github个人博客不被百度收录的问题" />
+  <meta property="og:url" content="https://lzh2665692.github.io/post/wan-mei-jie-jue-github-ge-ren-bo-ke-bu-bei-bai-du-shou-lu-de-wen-ti" />
   <meta property="og:locale" content="zh-CN" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="子哥の小破站" />
@@ -163,15 +163,11 @@
             <div class="post-heading">
               <span class="tags">
                 
-                <a href="https://lzh2665692.github.io/tag/github" class="tag">Github</a>
-                
-                <a href="https://lzh2665692.github.io/tag/gridea" class="tag">Gridea</a>
-                
               </span>
-              <h1>使用Github Pages和Gridea搭建个人博客</h1>
+              <h1>完美解决Github个人博客不被百度收录的问题</h1>
               <span class="meta">
                 Posted on
-                2022-07-10-0，4 min read
+                2022-07-14-0，3 min read
               </span>
             </div>
           
@@ -186,82 +182,97 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto post-content-container">
           
-          <p>之前我写过一个关于如何使用Hexo博客系统搭建静态博客的博文：<a href="https://www.zigecn.eu.org/9b2b00ac.html">博客原文</a></p>
-<p>有同学跟我说像Hexo这样的静态博客使用不方便，因为需要熟悉Git命令，对非计算机专业同学来说很不友好，增加了其学习成本。<br>
-不过我后来又发现了一个超级棒的静态博客写作客户端——Gridea。即使是非计算机同学，也能愉快地构建并管理博客。</p>
-<p>本文，我就来教大家如何来使用Github Pages和Gridea来搭建个人博客~</p>
-<h1 id="关于github-pages">关于Github Pages</h1>
-<p>官方文档：</p>
-<blockquote>
-<p>GitHub Pages 是一项静态站点托管服务，它直接从 GitHub 上的仓库获取 HTML、CSS 和 JavaScript 文件，（可选）通过构建过程运行文件，然后发布网站。</p>
-</blockquote>
+          <h1 id="序言">序言</h1>
+<p>我这个博客本来是挂在 GitHub Pages，但是后来发现Github把百度的爬虫给办了（好像是百度的爬虫爬的太狠，影响Github pages的正常使用），这也就导致了我部署在Github上的个人博客无法被收录。后来Cloudflare Page推出，这个问题也就迎刃而解了。<br>
+为了让广大网友不被此问题侵扰，特写此文。</p>
+<h1 id="cloudflare-pages的优点">Cloudflare Pages的优点</h1>
+<ul>
+<li>CloudFlare Pages 没被墙</li>
+<li>CloudFlare Pages 自选IP后尤其是移动，速度比隔壁 Vercel 还要快不少，不信你可以看我博客的评论区，评论系统就是部署在 Vercel 东京机房的（</li>
+<li>CloudFlare Pages 本身就集成了 CI/CD，而且我个人感觉比 GitHub Action 以及 Travis CI 稳定，也省得折腾，唯一的限制就是每个月免费构建额度是500次，但这也已经很够用了吧（</li>
+<li>CloudFlare Pages 的自动化构建可以从 private repository 拉取源文件，不像 GitHub Pages 必须是 public repo</li>
+<li>支持多个自定义域名</li>
+<li>CloudFlare Pages 没有 ban 掉百度爬虫，百度收录正常</li>
+</ul>
 <!--more-->
-<p>emmm，总之，GitHub Pages会发布您推送到代码仓库的任何静态文件，你可以创建自己的静态文件或使用静态站点生成器（如Hexo）为你构建站点，然后就可以使用【用户名】.github.io域名访问你的博客网站了。<br>
-对了，是免费的哦~</p>
-<h1 id="关于gridea">关于Gridea</h1>
-<p>官方文档：</p>
-<blockquote>
-<p>Gridea 是一个静态博客写作客户端，帮助你更容易地构建并管理博客或任何静态站点。</p>
-</blockquote>
-<p><a href="https://gridea.dev/">Gridea</a>的方便就在于可以使用客户端直接编写代码，然后只要点击按钮就能发布，非常人性化。重要的是，其提供了Windows、Mac OS和Linux三种操作系统的客户端。Gridea的界面是这样的：<br>
-<img src="https://pic3.zhimg.com/80/v2-700a119278166a70b2d352abe7c70d9e_720w.jpg" alt="Gridea" title="Gridea" loading="lazy"><br>
-怎么样？是不是非常小清新？是不是迫不及待地想要开始了？！</p>
-<h1 id="开始部署">开始部署</h1>
-<h2 id="1注册github账号">1.注册Github账号</h2>
-<p>先去全球最大的同性恋交流平台——<a href="https://www.github.com/">Github</a>上注册一个账号，登录。</p>
-<h2 id="2创建仓库token">2.创建仓库token</h2>
-<p>登录后，先进入<a href="https://github.com/settings/tokens/new">创建token</a>的页面，然后填写Note（相当于是个提示吧，因为你可能有多个token，便于区分用途），勾上repo即可，往下拉点Generate token。<br>
-<img src="https://pic2.zhimg.com/80/v2-fa7f773e1925f1289bea9d53cc7aa20d_720w.jpg" alt="创建仓库token" title="创建仓库token" loading="lazy"><br>
-然后点这个图标先复制，先保存起来吧，不然你下次再点开就看不到了，得重新生成<br>
-<img src="https://pic3.zhimg.com/80/v2-8ea52e82214c58feed2958471add7c56_720w.jpg" alt="复制仓库token" title="复制仓库token" loading="lazy"></p>
-<h2 id="3-创建公共仓库">3 创建公共仓库</h2>
-<p>点击右上角头像左边的+号，然后选择<code>New repository</code>。<br>
-<img src="https://pic1.zhimg.com/80/v2-c28e327d193e1d1cfe071519fcbf50c8_720w.jpg" alt="创建公共仓库" title="创建公共仓库" loading="lazy"></p>
-<p>填写好信息，点下面的<code>Create repository</code>。</p>
-<blockquote>
-<p>注意：Repository name填【你的用户名】./github.io，Description可选填。<br>
-<img src="https://pic3.zhimg.com/80/v2-98e889c5e83fdf57878aa8b4177bee42_720w.jpg" alt="创建公共仓库" title="创建公共仓库" loading="lazy"><br>
-创建成功后，就是只有一个只有README.md的仓库，这时你就可以在浏览器访问【你的用户名】.github.io，可以看到内容，就可以了。</p>
-</blockquote>
-<h1 id="运行gridea">运行Gridea</h1>
-<p>去<a href="https://gridea.dev/">Gridea官网</a>下载你操作系统对应的安装包，安装，运行。第一次使用要进行配置，点击<code>远程</code>进行配置。<br>
-<img src="https://pic4.zhimg.com/80/v2-da2e52949c2d435919ead1bb8dde4c03_720w.jpg" alt="Gridea配置" title="Gridea配置" loading="lazy"></p>
-<blockquote>
-<p>平台要选<code>Github Pages</code>，域名和仓库名称填Github的仓库名，分支填<code>main</code>（原先的<code>master</code>有争议，现在已全面改为<code>main</code>），令牌就是刚刚要你复制的token。另外你要绑定域名的话，CNAME就填你的域名。<br>
-如果你不会自定义域名的话，请参考这篇博客：<a href="https://www.zigecn.eu.org/9b2b00ac.html">使用Hexo+Github搭建博客，并自定义域名</a></p>
-</blockquote>
-<p>填写完成后，点<code>保存</code>，然后检测一下<code>远程连接</code>，没问题的话就点左下角的<code>同步</code>。<br>
-这样你就可以访问<code>xxx.github.io</code>来打开你的博客网站了，如果你设置了CNAME，就是访问你的域名。文章的管理就可以直接在这个客户端上操作，同时也可以选择你喜欢的主题，自己多去研究研究吧，哈哈。另外，附上一些答疑。</p>
-<p>大家可以看到，我写的这个教程主要是发的截图，并没有写一行代码，这就是使用Gridea客户端的好处。</p>
-<p>OK，接下来你就自己去折腾你的博客吧~，有问题敬请评论。</p>
+<h1 id="部署">部署</h1>
+<h2 id="序言-2">序言</h2>
+<p>我的博客使用Hexo驱动的，所以在这里就使用Hexo为演示步骤，其他建站系统也大同小异。</p>
+<h2 id="添加站点">添加站点</h2>
+<p>我们首先在 CloudFlare 管理面板导航栏即可找到 Pages 服务 (简体中文为 “网页”)，进入页面后，点击 <code>创建项目</code> 。选择<code>连接到git</code>。<br>
+接着绑定部署着你的博客的Github账号，选择你部署博客的仓库。<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/14/tk5v8KsMA9/gsfn.png" alt="选择仓库" title="选择仓库" loading="lazy"></p>
+<p>点击<code>开始设置</code>，进入<code>设置构建和部署</code>界面。<code>框架预设</code>选择None，<code>构建指令</code>输入<code>exit 0</code>，其他选项保持默认。<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/14/elq4gWFucN/bbn.png" alt="构建和部署" title="构建和部署" loading="lazy"></p>
+<p>接着点击<code>保存并部署</code>，进入<code>部署站点</code>页面，稍等片刻即可部署完成。<br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/14/4ulWzCJ17w/nbv.png" alt="成功部署1" title="成功部署1" loading="lazy"><br>
+<img src="http://zigeltd.eu.org/?/images/2022/07/14/r7ZO1vP0Z4/y.png" alt="成功部署2" title="成功部署2" loading="lazy"></p>
+<p>最后使用Cloudflare分配给你的二级域名即可访问你的博客啦~</p>
+<h2 id="绑定自定义域名">绑定自定义域名</h2>
+<p>绑定非 CloudFlare 上购买/解析的自定义域名时需要验证 DNS 记录，CloudFlare Pages 要求 CNAME 记录指向它给你分配的二级域名，但众所周知 CNAME 记录和 MX 记录会有一定冲突，可能导致你的域名邮箱收不到邮件。<br>
+这时我们只要把CNAME记录换为A和AAAA记录即可。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th style="text-align:center">名称</th>
+<th style="text-align:right">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td style="text-align:center">@</td>
+<td style="text-align:right">1.1. 1.1</td>
+</tr>
+<tr>
+<td>A</td>
+<td style="text-align:center">@</td>
+<td style="text-align:right">1.0. 0.1</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td style="text-align:center">@</td>
+<td style="text-align:right">2606:4700:4700::1111</td>
+</tr>
+<tr>
+<td>AAAA</td>
+<td style="text-align:center">@</td>
+<td style="text-align:right">2606:4700:4700::1001</td>
+</tr>
+</tbody>
+</table>
+<h1 id="最后">最后</h1>
+<p>不过有一点需要说明，在解析的时候，建议不要把天朝指向到 IPv6 的 CDN，真的很卡……</p>
+<p>具体国内分运营商解析还需要再配置，网上自选 CloudFlare 工具的轮子很多，网友跑出来的结果也很完整了。没错，使用 CloudFlare Pages 不用 CloudFlare Partner 也能用自选 IP CDN，这也算一个好处吧。</p>
 
           <div class="toc-container"><ul class="markdownIt-TOC">
-<li><a href="#%E5%85%B3%E4%BA%8Egithub-pages">关于Github Pages</a></li>
-<li><a href="#%E5%85%B3%E4%BA%8Egridea">关于Gridea</a></li>
-<li><a href="#%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2">开始部署</a>
+<li><a href="#%E5%BA%8F%E8%A8%80">序言</a></li>
+<li><a href="#cloudflare-pages%E7%9A%84%E4%BC%98%E7%82%B9">Cloudflare Pages的优点</a></li>
+<li><a href="#%E9%83%A8%E7%BD%B2">部署</a>
 <ul>
-<li><a href="#1%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E5%8F%B7">1.注册Github账号</a></li>
-<li><a href="#2%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93token">2.创建仓库token</a></li>
-<li><a href="#3-%E5%88%9B%E5%BB%BA%E5%85%AC%E5%85%B1%E4%BB%93%E5%BA%93">3 创建公共仓库</a></li>
+<li><a href="#%E5%BA%8F%E8%A8%80-2">序言</a></li>
+<li><a href="#%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9">添加站点</a></li>
+<li><a href="#%E7%BB%91%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D">绑定自定义域名</a></li>
 </ul>
 </li>
-<li><a href="#%E8%BF%90%E8%A1%8Cgridea">运行Gridea</a></li>
+<li><a href="#%E6%9C%80%E5%90%8E">最后</a></li>
 </ul>
 </div>
           
           <hr />
           <p class="next-post">下一篇：
-            <a href="https://lzh2665692.github.io/post/github-hexo">
+            <a href="https://lzh2665692.github.io/post/tiktok">
               <span class="post-title">
-                Github Pages+Hexo 搭建静态博客&rarr;
+                大陆轻松访问TikTok镜像站&rarr;
               </span>
             </a>
           </p>
           
           <div class="comment" style="text-align: center;">
             
-            <span id="/post/github-gridea/" class="leancloud_visitors"
-              data-flag-title="使用Github Pages和Gridea搭建个人博客">
+            <span id="/post/wan-mei-jie-jue-github-ge-ren-bo-ke-bu-bei-bai-du-shou-lu-de-wen-ti/" class="leancloud_visitors"
+              data-flag-title="完美解决Github个人博客不被百度收录的问题">
               <em class="post-meta-item-text">阅读量 </em>
               <i class="leancloud-visitors-count">loading...</i>
             </span>
