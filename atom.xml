@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lzh2665692.github.io</id>
     <title>子哥の小破站</title>
-    <updated>2022-07-14T03:27:04.652Z</updated>
+    <updated>2022-07-14T08:43:31.977Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lzh2665692.github.io"/>
     <link rel="self" href="https://lzh2665692.github.io/atom.xml"/>
@@ -10,6 +10,52 @@
     <logo>https://lzh2665692.github.io/images/avatar.png</logo>
     <icon>https://lzh2665692.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, 子哥の小破站</rights>
+    <entry>
+        <title type="html"><![CDATA[友链申请]]></title>
+        <id>https://lzh2665692.github.io/post/you-lian-shen-qing</id>
+        <link href="https://lzh2665692.github.io/post/you-lian-shen-qing">
+        </link>
+        <updated>2022-07-14T08:42:54.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="申请条件">申请条件</h1>
+<blockquote>
+<p>1、向站长邮箱<code>zige@zige.edu.eu.org</code>发送申请，格式按照下面（本站链接的格式申请即可）；<br>
+2、确保您的网站/博客内容健康，不含政治内容以及擦边球内容；<br>
+3、与道德相违或严重违反法律的，本博客永远不与其同流合污；<br>
+4、注意：愿各位都做讲诚信的人！</p>
+</blockquote>
+<h1 id="本站链接">本站链接</h1>
+<blockquote>
+<p>网站名称：子哥の小破站<br>
+网站地址：<a href="https://www.zigecn.eu.org/">https://www.zigecn.eu.org/</a><br>
+网站描述：促进信息全球化<br>
+网站Logo：<a href="http://pdsqzlt.tk/zige.jpg">http://pdsqzlt.tk/zige.jpg</a></p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="申请条件">申请条件</h1>
+<blockquote>
+<p>1、向站长邮箱<code>zige@zige.edu.eu.org</code>发送申请，格式按照下面（本站链接的格式申请即可）；<br>
+2、确保您的网站/博客内容健康，不含政治内容以及擦边球内容；<br>
+3、与道德相违或严重违反法律的，本博客永远不与其同流合污；<br>
+4、注意：愿各位都做讲诚信的人！</p>
+</blockquote>
+<h1 id="本站链接">本站链接</h1>
+<blockquote>
+<p>网站名称：子哥の小破站<br>
+网站地址：<a href="https://www.zigecn.eu.org/">https://www.zigecn.eu.org/</a><br>
+网站描述：促进信息全球化<br>
+网站Logo：<a href="http://pdsqzlt.tk/zige.jpg">http://pdsqzlt.tk/zige.jpg</a></p>
+</blockquote>
+<!--more-->
+<h1 id="其他说明">其他说明</h1>
+<blockquote>
+<p>1、本站将不定期检查死链等无效链接，如果发现贵站取消了本站的链接，我们也将删除，恕不通知;<br>
+2、对于长期无更新、无法访问的博客，本站有权终止其友情链接；<br>
+3、希望在友链之后，能互勉互动，在我看来友情最重要O(∩_∩)O<br>
+4、请确定贵站能长期稳定运营下去，再做申请！<br>
+5、链接变更请联系站长邮箱告知。</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[完美解决Github个人博客不被百度收录的问题]]></title>
         <id>https://lzh2665692.github.io/post/wan-mei-jie-jue-github-ge-ren-bo-ke-bu-bei-bai-du-shou-lu-de-wen-ti</id>
@@ -800,32 +846,6 @@ eu.org是欧盟组织下面的域名，EU代表欧盟，Paul Mockapetris在1996�
 <p>7、耐心等待审核通过，会有邮件通知。大概3–14天。</p>
 <h1 id="将已经申请好的eu域名托管到cloudflare">将已经申请好的eu域名托管到Cloudflare</h1>
 <p>登入<a href="https://nic.eu.org/arf/en/">管理台</a>,将名称服务器改为cloudflare的就行了</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gridea 上手教程——小白也可以用的 GitHub Pages 搭建工具]]></title>
-        <id>https://lzh2665692.github.io/post/gridea</id>
-        <link href="https://lzh2665692.github.io/post/gridea">
-        </link>
-        <updated>2022-04-09T13:29:47.000Z</updated>
-        <content type="html"><![CDATA[<p>最近为了分享自己的学习心得，开始利用 GitHub Pages 搭建个人博客。但是水平实在太 ，所以没有选择主流的hexo，而是使用Gridea。初始配置简单，后续维护更是简单。对于我这种又懒又 的人来说再合适不过了。今天就总结出文章分享给大家。</p>
-<p>本地软件安装<br>
-Git 安装<br>
-Gridea 的同步功能依赖本地 Git 客户端，所以我们需要先安装 Git。 Git官网下载平台对应的安装程序。安装没有特别的要求，一路下一步即可。</p>
-<p>Gridea 安装<br>
-Gridea官网下载对应平台的安装程序进行安装。</p>
-<p>初始配置<br>
-GitHub Pages 创建<br>
-仓库创建<br>
-首先，需要创建一个仓库，建议仓库为 http://username.github.io。根据官方文档， GitHub 会默认将名称符合要求的仓库设置成 GitHub Pages 可访问类型。例如我的用户名是 yym0924，所以仓库名就是http://yym0924.github.io。不过我创建仓库的时候并未自动启用 GitHub Pages，遇到这种情况手动开启即可。</p>
-<p>基本设置<br>
-开通 GitHub Pages<br>
-这里也说明下手动启用 GitHub Pages 的方式。<br>
-<img src="https://lzh2665692.github.io/post-images/1649511121985.jpg" alt="" loading="lazy"><br>
-打开仓库的 Settings<br>
-<img src="https://lzh2665692.github.io/post-images/1649511160373.jpg" alt="" loading="lazy"><br>
-找到 GitHub Pages 设置的地方 点击 Choose a theme 随意选择一个主题。因为后续我们使用 Gridea 设置主题，这边选择主题只是为了开启 GitHub Pages 可访问类型。<br>
-勾选上 repo 相关权限即可</p>
 ]]></content>
     </entry>
 </feed>
